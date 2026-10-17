@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith Events Guide — Setup &amp; Commands</title>
+  <meta name="description" content="Setup, features, commands and settings for Zenith Events (Minecraft Bedrock Edition).">
+  <meta property="og:title" content="Zenith Events Guide — Setup &amp; Commands">
+  <meta property="og:description" content="Setup, features, commands and settings for Zenith Events (Minecraft Bedrock Edition).">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/guide-events.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/guide-events.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="eyebrow">Guide · v1.2.0</div>
+  <h1>Zenith Events</h1>
+  <p class="lead">Tournaments, Sumo, LMS, KOTH, Races and Spleef, with auto events and money, clan point and loot prizes.</p>
+</header>
+<section class="doc-wrap">
+  <div class="wrap doc-grid">
+    <article class="doc"><p>Server events and tournaments for Minecraft Bedrock Edition, <strong>by Zenith</strong>. Host one from a menu, or let auto events run on their own. Players vote on what&#39;s next, join with one command, the system runs the bracket or match, and winners get paid.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Version</td>
+<td>1.2.0</td>
+</tr>
+<tr>
+<td>Experiments</td>
+<td><strong>None needed.</strong> Turn the pack on and play.</td>
+</tr>
+<tr>
+<td>Game</td>
+<td>1.26.50+</td>
+</tr>
+<tr>
+<td>Works on</td>
+<td>Realms, single-player, hosted servers / BDS</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td><code>zenith_events</code></td>
+</tr>
+</tbody></table>
+<h2>Event types</h2>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>How it works</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Tournament</strong></td>
+<td>1v1 single-elimination bracket with the event kit. Byes for odd numbers, a time limit per fight (more health wins), and everyone else watches from the event lobby.</td>
+</tr>
+<tr>
+<td><strong>Sumo Tournament</strong></td>
+<td>The same bracket, but nobody takes damage. Knock your opponent off the platform.</td>
+</tr>
+<tr>
+<td><strong>Last Man Standing</strong></td>
+<td>Everyone spawns at once with one life each. Kills are tracked. Last one alive wins.</td>
+</tr>
+<tr>
+<td><strong>King of the Hill</strong></td>
+<td>Score by holding the hill <strong>alone</strong>. Contested hills don&#39;t count. Respawn on death. First to 60s wins.</td>
+</tr>
+<tr>
+<td><strong>Race</strong></td>
+<td>Everyone starts together, with no PvP. First to the finish wins. Fall and you go back to the start.</td>
+</tr>
+<tr>
+<td><strong>Spleef</strong></td>
+<td>Instant-break shovels, no damage, just knockback. Fall below the floor and you&#39;re out. Last one standing wins. Save an arena snapshot and the floor rebuilds itself.</td>
+</tr>
+<tr>
+<td><strong>Sumo Brawl</strong></td>
+<td>Free-for-all sumo. Everyone on the platform at once, no damage, just knockback. Knocked off = out. Knock-offs are credited.</td>
+</tr>
+<tr>
+<td><strong>One in the Chamber</strong></td>
+<td>A bow, a sword and <strong>one arrow</strong>. Arrows kill in one hit, every kill gives you an arrow back, missed arrows are gone. 3 lives each.</td>
+</tr>
+</tbody></table>
+<h2>Features</h2>
+<ul>
+<li><strong>Signups</strong>: announced in chat and as a title on everyone&#39;s screen, with the prize in the announcement. Joined players see a live countdown on their action bar.</li>
+<li><strong>Reward preview</strong>: the join menu and the join screen show exactly what 1st, 2nd and 3rd win (money, clan points, items) before you join.</li>
+<li><strong>Fair play</strong>: frozen countdowns with titles and sounds, and players outside the action can&#39;t hurt or be hurt. Outsiders can&#39;t interfere with participants, and fighters can&#39;t break the arena (except in Spleef).</li>
+<li><strong>Safe for survival worlds</strong>: joining asks before clearing the inventory. Everyone gets their game mode and position back afterwards.</li>
+<li><strong>Plays nice with Zenith Duels</strong>: players in an event are marked busy, so Duels leaves them alone, and players in a duel are asked to finish it before joining.</li>
+<li><strong>Live status</strong>: bracket view with results and upcoming fights, alive counts, kills, KOTH scores, race placings and times.</li>
+<li><strong>Spectate</strong>: once you&#39;re out (or while you wait for your next fight), pick a player to watch. You fly unseen and stay close to the action.</li>
+<li><strong>Rewards for 1st / 2nd / 3rd</strong>:<ul>
+<li>Money through <strong>Zenith Economy</strong></li>
+<li>Clan points through <strong>Zenith Clans</strong></li>
+<li>Reward items saved from your inventory for the winner</li>
+<li>A gold particle burst with <strong>Zenith Ability Weapons</strong></li>
+<li>Only the packs you have show up in menus and results.</li>
+</ul>
+</li>
+<li><strong>Entry fees</strong> (with Zenith Economy): optional, refunded if the event is cancelled or a player backs out before it starts. Fees can be added to the winner&#39;s prize.</li>
+<li><strong>Winner celebrations</strong>: VICTORY title and sound for the winner, place titles for 2nd and 3rd, round and FINAL titles in brackets.</li>
+<li><strong>Auto events</strong>:<ul>
+<li>Every N minutes after the last event, and/or at set clock times (e.g. 18:00 and 21:30 in your time zone).</li>
+<li>Rotate through the event types in order, or pick at random.</li>
+<li>Heads-up announcements 5 minutes, 1 minute and 10 seconds before.</li>
+</ul>
+</li>
+<li><strong>Player vote</strong>: before each auto event, players pick between 3 event types in a pop-up screen (or <code>/zenith_events:vote</code>). Hosts can also start a vote any time.</li>
+<li><strong>Champions and records</strong>: wins and podiums per player, a top-10 screen and a floating <strong>Event Champions</strong> board. All-time records for fastest race, longest hill hold, most One in the Chamber kills and most Sumo Brawl knock-offs, plus the top winner of every event type.</li>
+<li><strong>Auto-reset arena</strong>: save a structure snapshot once and the fight arena is restored between fights.</li>
+<li><strong>Disconnects and <code>/reload</code></strong>: players who leave mid-event are eliminated and restored when they come back.</li>
+</ul>
+<h2>Setup (5 minutes)</h2>
+<ol>
+<li>As an operator: <code>/zenith_events:setadmin @s true</code></li>
+<li><code>/zenith_events:host</code> → <strong>Setup</strong>. Stand at each spot and press its button:<ul>
+<li><strong>Event lobby</strong> (where players wait and spectate)</li>
+<li><strong>Fight spawn A / B</strong> (Tournament + Sumo Tournament), plus <strong>arena corners → Save snapshot</strong> for auto-reset</li>
+<li><strong>FFA spawns</strong>: add 4+ (Last Man Standing, KOTH, Spleef, Sumo Brawl, One in the Chamber). Spleef and Sumo Brawl need the spawns on a raised platform: falling 3 blocks below the lowest spawn means you&#39;re out.</li>
+<li><strong>Hill</strong> (KOTH), <strong>Race start</strong> and <strong>Race finish</strong></li>
+<li><strong>Set event kit from my inventory</strong> (optional)</li>
+</ul>
+</li>
+<li><strong>Rewards &amp; entry fee</strong> and <strong>Auto events &amp; voting</strong> as you like.</li>
+<li><strong>Start an event</strong> → pick a type, or <strong>Let players vote</strong>. Types that still need setup say what&#39;s missing.</li>
+</ol>
+<h2>Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Who</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/zenith_events:join</code> · <code>:leave</code></td>
+<td>Everyone</td>
+<td>Join or leave the current event</td>
+</tr>
+<tr>
+<td><code>/zenith_events:menu</code></td>
+<td>Everyone</td>
+<td>Status, rewards, vote, spectate, event types, champions</td>
+</tr>
+<tr>
+<td><code>/zenith_events:vote</code></td>
+<td>Everyone</td>
+<td>Vote for the next event (while a vote is open)</td>
+</tr>
+<tr>
+<td><code>/zenith_events:spectate</code></td>
+<td>Participants</td>
+<td>Watch the action once you&#39;re out</td>
+</tr>
+<tr>
+<td><code>/zenith_events:top</code> · <code>:records</code></td>
+<td>Everyone</td>
+<td>Event champions and all-time records</td>
+</tr>
+<tr>
+<td><code>/zenith_events:host</code></td>
+<td>Hosts</td>
+<td>Host panel</td>
+</tr>
+<tr>
+<td><code>/zenith_events:start &lt;tournament|sumo|lms|koth|race|spleef|brawl|oitc&gt;</code></td>
+<td>Operators, command blocks</td>
+<td>Start an event</td>
+</tr>
+<tr>
+<td><code>/zenith_events:setadmin &lt;players&gt; &lt;true|false&gt;</code></td>
+<td>Operators</td>
+<td>Give/remove host rights</td>
+</tr>
+</tbody></table>
+<h2>Customization</h2>
+<p>Everything is set in-game from the host panel and saved to the world. No files to edit.</p>
+<table>
+<thead>
+<tr>
+<th>Menu</th>
+<th>What you can change</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Rewards &amp; entry fee</strong></td>
+<td>Money and clan points for 1st/2nd/3rd, entry fee, fees to the winner, the winner&#39;s reward items</td>
+</tr>
+<tr>
+<td><strong>Auto events &amp; voting</strong></td>
+<td>Interval, clock times and time zone (the menu shows the current time so you can check it), minimum players online, rotation or random, voting on/off, vote time, vote pop-up, which event types are included</td>
+</tr>
+<tr>
+<td><strong>Settings</strong></td>
+<td>Signup time, countdown, fight and event time limits, KOTH target and hill size, race finish size, One in the Chamber lives, spectating on/off, title announcements</td>
+</tr>
+<tr>
+<td><strong>Champions board &amp; records</strong></td>
+<td>Place/remove the floating board, view records, reset stats</td>
+</tr>
+</tbody></table>
+<p>New event types (Sumo Brawl, One in the Chamber) are included in auto events on new worlds. On worlds from an older version, tick them in <strong>Auto events &amp; voting</strong>.</p>
+<p><strong>Rebrand add-on (+$2):</strong> we build the pack with <strong>your server&#39;s name</strong> in chat, menus, titles and the pack name (e.g. &quot;RoyalMC Events&quot;). The license and the credit line stay with Zenith (&quot;Powered by Zenith&quot;).</p>
+<p><strong>Protected code:</strong> release builds are bundled and obfuscated. Redistribution, resale or modification isn&#39;t allowed. Your license covers your own Realms/servers.</p>
+<h2>Support</h2>
+<p>Questions, bugs or setup help? Open a ticket in our Discord: <strong>discord.gg/XKXP7hn5Hr</strong>. Every admin panel shows this link too.</p>
+<h2>Changelog</h2>
+<h3>1.2.0</h3>
+<ul>
+<li><strong>Two new events:</strong> Sumo Brawl (free-for-all sumo) and One in the Chamber.</li>
+<li><strong>Player vote:</strong> pick the next event from 3 options in a pop-up screen or with <code>/zenith_events:vote</code>. Hosts can start a vote from the host panel.</li>
+<li><strong>Auto events upgrade:</strong> clock times with a time zone, rotation in order, and heads-up announcements 5 min / 1 min / 10 s before.</li>
+<li><strong>Reward preview</strong> in the join menu and join screen, and prizes shown in signups and results.</li>
+<li><strong>Entry fees</strong> with refunds when an event is cancelled, optionally added to the winner&#39;s prize.</li>
+<li><strong>Spectate</strong> (<code>/zenith_events:spectate</code>) for players who are out or waiting for their fight.</li>
+<li><strong>Records</strong> (<code>/zenith_events:records</code>): fastest race, longest hill hold, most kills, most knock-offs, most wins per event type.</li>
+<li>Countdown, round, FINAL, VICTORY and podium titles with sounds. Kill counts in Last Man Standing.</li>
+<li>Works with Zenith Duels: event players are marked busy, and players in a duel can&#39;t join until it&#39;s over.</li>
+<li>Money and clan point rewards only apply (and only show up) when Zenith Economy / Zenith Clans are installed.</li>
+<li>Fixes: players who left a tournament could be pulled into a later fight; leavers could get podium rewards; &quot;Clear saved reward items&quot; didn&#39;t work; the Refresh button in Live status closed the screen; fighters could break the arena; players coming back after a disconnect stayed in the arena instead of being restored.</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li><strong>Spleef</strong> event (works with auto events and the arena snapshot).</li>
+<li>A support line in the host panel.</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release: 5 event types, auto events, rewards, champions board.</li>
+</ul>
+</article>
+    <aside class="doc-side">
+      <div class="card">
+        <img src="assets/art/thumb-events.png" alt="" width="320" height="240" style="width:100%;margin:-10px 0 6px">
+        <div class="eyebrow">Get it</div>
+        <div class="price" style="margin:10px 0 4px">$15 <small>/ from</small></div>
+        <p class="muted" style="margin:0 0 16px">One-time payment. Rebrand +$2.</p>
+        <a class="btn btn-gold" style="width:100%;justify-content:center" href="events.html">View product</a>
+        <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:8px" data-discord href="https://discord.gg/XKXP7hn5Hr">Ask on Discord</a>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="eyebrow">All guides</div>
+        <div class="side-links"><a href="guide-ffa.html">🗡️ Zenith FFA</a><a href="guide-duels.html">⚔️ Zenith Ranked Duels</a><a href="guide-eco.html">💰 Zenith Economy</a><a href="guide-aw.html">✨ Zenith Ability Weapons</a><a href="guide-events.html" class="on">🏆 Zenith Events</a><a href="guide-clans.html">🛡️ Zenith Clans</a><a href="install.html">📥 How to install</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

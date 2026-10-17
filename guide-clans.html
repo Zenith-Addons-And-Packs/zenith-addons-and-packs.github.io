@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith Clans Guide — Setup &amp; Commands</title>
+  <meta name="description" content="Setup, features, commands and settings for Zenith Clans (Minecraft Bedrock Edition).">
+  <meta property="og:title" content="Zenith Clans Guide — Setup &amp; Commands">
+  <meta property="og:description" content="Setup, features, commands and settings for Zenith Clans (Minecraft Bedrock Edition).">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/guide-clans.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/guide-clans.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="eyebrow">Guide · v1.0.0</div>
+  <h1>Zenith Clans</h1>
+  <p class="lead">Clans: roles, invites, clan chat, home and bank, levels, wars, allies, quests, no friendly fire and leaderboards.</p>
+</header>
+<section class="doc-wrap">
+  <div class="wrap doc-grid">
+    <article class="doc"><p>Clans for Minecraft Bedrock Edition, <strong>by Zenith</strong>. Players found a clan with a name, a colored [TAG] and a home, then level it up together: kills, server events and weekly quests earn clan points, levels unlock perks, and leaders can challenge rival clans to timed wars or team up with allies. Everything runs from one menu, with no command blocks and no experiments.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Experiments</td>
+<td><strong>None needed.</strong> Turn the pack on and play.</td>
+</tr>
+<tr>
+<td>Game</td>
+<td>1.26.50+</td>
+</tr>
+<tr>
+<td>Works on</td>
+<td>Realms, single-player, hosted servers / BDS</td>
+</tr>
+<tr>
+<td>Resource pack</td>
+<td>Not needed</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td><code>zenith_clans</code></td>
+</tr>
+</tbody></table>
+<h2>Features</h2>
+<p><strong>Clans</strong></p>
+<ul>
+<li>Create a clan with a name, a 2–4 letter <strong>[TAG]</strong> and a tag color. The tag shows above members&#39; heads.</li>
+<li>Roles: <strong>Leader</strong>, <strong>Officers</strong> and <strong>Members</strong>. Officers invite, kick members and set the home. The leader promotes, demotes and can hand the clan over.</li>
+<li>Invites by menu or command, with a timer. A leader who leaves hands the clan to the oldest officer.</li>
+<li><strong>Member list</strong> with online status, roles, kills for the clan and &quot;last seen&quot; for offline members.</li>
+<li><strong>Clan chat</strong> (<code>/zenith_clans:c &lt;message&gt;</code>), a message of the day, and a <strong>clan home</strong> with a stand-still warmup that cancels if you move or get hit.</li>
+<li><strong>Clan bank</strong> (with Zenith Economy): members deposit coins, the leader withdraws (officers too, if you allow it).</li>
+</ul>
+<p><strong>Clan levels</strong></p>
+<ul>
+<li>Every clan point a clan earns is also XP, and XP never goes down. Clans level up from 1 to 10 (you choose the max).</li>
+<li><strong>Perks per level</strong>: more member slots, a bigger bank, and a shorter home warmup.</li>
+<li>A colored level badge (Lv1 to Lv10) shows in menus, leaderboards and nametags.</li>
+<li>Level-ups get a big on-screen title and a perks summary for every online member.</li>
+</ul>
+<p><strong>Clan wars</strong></p>
+<ul>
+<li>A leader challenges another clan and their leader accepts. For 15 minutes (you choose), the clan that earns more clan points wins.</li>
+<li><strong>Kills between the two clans give extra points</strong>, so fighting each other matters most.</li>
+<li>Live score, time left and a progress bar in the war menu, plus warnings at 5 minutes and 1 minute left.</li>
+<li>The result is announced to the whole server. The winner gets <strong>bonus points</strong>, and every clan keeps a win/loss record.</li>
+<li>A cooldown between wars keeps it fair.</li>
+</ul>
+<p><strong>Allies</strong></p>
+<ul>
+<li>Up to 2 allied clans per clan (you choose). Leaders send and accept ally requests.</li>
+<li><strong>No friendly fire between allies</strong> (can be turned off). Allies are listed on every clan&#39;s info card.</li>
+</ul>
+<p><strong>Weekly quests</strong></p>
+<ul>
+<li>A new set of quests every Monday (00:00 UTC), the same for every clan. Every member&#39;s progress counts.</li>
+<li>Quests come from a pool: get kills, earn clan points, deposit coins in the bank, earn points in server events, win a clan war. Quests that need an addon you don&#39;t have are left out.</li>
+<li>Progress bars in the clan menu, and <strong>clan points</strong> plus a title when a quest is done.</li>
+</ul>
+<p><strong>Fair play</strong></p>
+<ul>
+<li>No friendly fire between clanmates. Hits are blocked, not healed back.</li>
+<li>Kills in Zenith Ranked Duels and Zenith Events don&#39;t count for clan points, so rematches can&#39;t be farmed. Clanmates can still fight each other there.</li>
+<li>Killing the same player again within 2 minutes gives no points (you choose the time).</li>
+<li>Clan home can&#39;t be used during a duel or event.</li>
+</ul>
+<p><strong>Leaderboards</strong></p>
+<ul>
+<li>In-game boards with pages: Top Clans, Highest Level, Most Kills, Best K/D, War Wins and Biggest Clans. Tap any clan to see its info card and members.</li>
+<li><strong>Floating leaderboards</strong> you place anywhere. They update live.</li>
+</ul>
+<p>All data survives <code>/reload</code>, relogs and restarts, and works for offline members too.</p>
+<h2>Setup (1 minute)</h2>
+<ol>
+<li>Turn on the pack (Behavior Packs → <strong>Zenith Clans</strong>).</li>
+<li>As an operator: <code>/zenith_clans:setadmin @s true</code></li>
+<li><code>/zenith_clans:admin</code>:<ul>
+<li><strong>Settings</strong>: member slots, points, levels, wars, allies and quests.</li>
+<li><strong>Floating leaderboards</strong>: place a board or two.</li>
+</ul>
+</li>
+<li>Done. Players use <code>/zenith_clans:menu</code>.</li>
+</ol>
+<h2>Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Who</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/zenith_clans:menu</code></td>
+<td>Everyone</td>
+<td>One menu for everything: create, members, quests, wars, allies, level, home, bank</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:c &lt;message&gt;</code></td>
+<td>Members</td>
+<td>Clan chat (no message opens a chat box)</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:invite &lt;player&gt;</code></td>
+<td>Leaders, officers</td>
+<td>Invite a player</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:accept</code> · <code>:deny</code></td>
+<td>Everyone</td>
+<td>Answer a clan invite</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:home</code></td>
+<td>Members</td>
+<td>Teleport to the clan home (warmup)</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:members</code></td>
+<td>Members</td>
+<td>Member list with online status and roles</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:quests</code></td>
+<td>Members</td>
+<td>This week&#39;s quests and progress</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:war</code></td>
+<td>Members</td>
+<td>War score, challenges, declare war (leaders)</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:allies</code></td>
+<td>Members</td>
+<td>Allies and ally requests (leaders manage them)</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:info [tag or name]</code></td>
+<td>Everyone</td>
+<td>Info card for your clan or another</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:top</code></td>
+<td>Everyone</td>
+<td>Clan leaderboards</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:admin</code></td>
+<td>Admins</td>
+<td>Admin panel</td>
+</tr>
+<tr>
+<td><code>/zenith_clans:setadmin &lt;players&gt; &lt;true|false&gt;</code></td>
+<td>Operators</td>
+<td>Give/remove admin</td>
+</tr>
+</tbody></table>
+<p><strong>For command blocks and NPCs:</strong> <code>/scriptevent zenith_clans:points &lt;amount&gt;</code>, run as a player, adds clan points to that player&#39;s clan (a negative amount takes them away).</p>
+<h2>Admin panel</h2>
+<p>Settings (33 options in 5 groups) · Manage clans (give or take points, set level, rename, call off a war, disband) · Clan wars (live scores, call off) · Floating leaderboards (place, remove nearest) · New season (reset stats, with or without levels).</p>
+<h2>Customization</h2>
+<p>Everything is set in-game from the admin panel and saved to the world. No files to edit.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Settings</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clans &amp; bank</td>
+<td>Member slots at level 1, invite time, home warmup, creation cost, clan bank on/off, officers can withdraw, [TAG] nametags</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td>No friendly fire, points per kill (clan player / clanless player), points lost on death, repeat-kill time</td>
+</tr>
+<tr>
+<td>Levels</td>
+<td>Max level, XP per level, extra member slots per level, bank limit and extra space per level, shorter home warmup per level</td>
+</tr>
+<tr>
+<td>Allies &amp; wars</td>
+<td>Allies per clan (0 = off), no friendly fire between allies, wars on/off, war length, war kill bonus, winner bonus, time between wars</td>
+</tr>
+<tr>
+<td>Weekly quests</td>
+<td>Quests on/off, quests per week, reward per quest, target for each quest type</td>
+</tr>
+</tbody></table>
+<p><strong>Rebrand add-on (+$2):</strong> we build the pack with <strong>your server&#39;s name</strong> in chat, menus, titles and the pack name (e.g. &quot;RoyalMC Clans&quot;). The license and the credit line stay with Zenith (&quot;Powered by Zenith&quot;).</p>
+<p><strong>Protected code:</strong> release builds are bundled and obfuscated. Redistribution, resale or modification isn&#39;t allowed. Your license covers your own Realms/servers.</p>
+<h2>Works with other Zenith addons</h2>
+<p>Every addon works on its own. Together they connect automatically, with nothing to set up:</p>
+<ul>
+<li><strong>Zenith Economy</strong>: clan bank, a coin cost to create a clan, and the &quot;deposit coins&quot; weekly quest.</li>
+<li><strong>Zenith FFA</strong>: nametags show the clan [TAG], and the FFA menu has a Clans button.</li>
+<li><strong>Zenith Ranked Duels</strong>: nametags show the clan [TAG]. Duel kills don&#39;t count for clan points.</li>
+<li><strong>Zenith Events</strong>: event rewards can pay clan points to the winners&#39; clans, and the &quot;earn points in server events&quot; weekly quest appears.</li>
+<li><strong>Other Zenith addons</strong> can tell clanmates and allies apart, because every member carries their clan and ally tags.</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>When Zenith FFA or Zenith Ranked Duels is installed, that addon draws the nametags (with the clan [TAG]) and Clans leaves them alone.</li>
+<li>Floating leaderboards are a pack entity (<code>zenith_clans:text</code>). If one doesn&#39;t appear, reopen the world once after adding the pack.</li>
+<li>War and ally requests stay open for 5 minutes. Weekly quests reset every Monday at 00:00 UTC.</li>
+</ul>
+<h2>Support</h2>
+<p>Questions, bugs or setup help? Open a ticket in our Discord: <strong>discord.gg/XKXP7hn5Hr</strong>. Every admin panel shows this link too.</p>
+<h2>Changelog</h2>
+<h3>1.0.0</h3>
+<ul>
+<li>First release: clans with roles, invites, chat, home and bank; clan levels with perks; clan wars; allies; weekly quests; leaderboards and floating boards.</li>
+</ul>
+</article>
+    <aside class="doc-side">
+      <div class="card">
+        <img src="assets/art/thumb-clans.png" alt="" width="320" height="240" style="width:100%;margin:-10px 0 6px">
+        <div class="eyebrow">Get it</div>
+        <div class="price" style="margin:10px 0 4px">$12 <small>/ from</small></div>
+        <p class="muted" style="margin:0 0 16px">One-time payment. Rebrand +$2.</p>
+        <a class="btn btn-gold" style="width:100%;justify-content:center" href="clans.html">View product</a>
+        <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:8px" data-discord href="https://discord.gg/XKXP7hn5Hr">Ask on Discord</a>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="eyebrow">All guides</div>
+        <div class="side-links"><a href="guide-ffa.html">🗡️ Zenith FFA</a><a href="guide-duels.html">⚔️ Zenith Ranked Duels</a><a href="guide-eco.html">💰 Zenith Economy</a><a href="guide-aw.html">✨ Zenith Ability Weapons</a><a href="guide-events.html">🏆 Zenith Events</a><a href="guide-clans.html" class="on">🛡️ Zenith Clans</a><a href="install.html">📥 How to install</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

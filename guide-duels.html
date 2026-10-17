@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith Ranked Duels Guide — Setup &amp; Commands</title>
+  <meta name="description" content="Setup, features, commands and settings for Zenith Ranked Duels (Minecraft Bedrock Edition).">
+  <meta property="og:title" content="Zenith Ranked Duels Guide — Setup &amp; Commands">
+  <meta property="og:description" content="Setup, features, commands and settings for Zenith Ranked Duels (Minecraft Bedrock Edition).">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/guide-duels.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/guide-duels.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="eyebrow">Guide · v1.2.0</div>
+  <h1>Zenith Ranked Duels</h1>
+  <p class="lead">Elo-ranked 1v1: ladders, Bronze → Zenith tiers, best-of matches, seasons, spectating and auto-reset arenas.</p>
+</header>
+<section class="doc-wrap">
+  <div class="wrap doc-grid">
+    <article class="doc"><p>1v1 ranked duels for Minecraft Bedrock Edition, <strong>by Zenith</strong>. Players queue from the lobby, get matched by Elo, fight in self-resetting arenas, and climb from Bronze to <strong>Zenith</strong>. Everything is set up in-game.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Version</td>
+<td>1.2.0</td>
+</tr>
+<tr>
+<td>Experiments</td>
+<td><strong>None needed.</strong> Turn the pack on and play.</td>
+</tr>
+<tr>
+<td>Game</td>
+<td>1.26.50+</td>
+</tr>
+<tr>
+<td>Works on</td>
+<td>Realms, single-player, hosted servers / BDS</td>
+</tr>
+<tr>
+<td>Resource pack</td>
+<td>Not needed</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td><code>zenith_duels</code></td>
+</tr>
+</tbody></table>
+<h2>Features</h2>
+<p><strong>Ladders</strong>: each has its own kit, rule and Elo</p>
+<table>
+<thead>
+<tr>
+<th>Ladder</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sword</td>
+<td>Last one standing</td>
+</tr>
+<tr>
+<td>Axe</td>
+<td>Last one standing (shield + bow)</td>
+</tr>
+<tr>
+<td>UHC</td>
+<td>Last one standing (rod, buckets, blocks)</td>
+</tr>
+<tr>
+<td>Boxing</td>
+<td>First to 100 hits. Nobody takes damage.</td>
+</tr>
+<tr>
+<td>Sumo</td>
+<td>Knock your opponent off. Falling 3 blocks below the spawns loses.</td>
+</tr>
+<tr>
+<td>Abilities</td>
+<td>Last one standing with Dash Blade, Inferno Sword and Frost Scythe. <strong>Appears automatically when Zenith Ability Weapons is installed.</strong></td>
+</tr>
+</tbody></table>
+<p>Admins can re-kit any ladder from their own inventory, change Boxing&#39;s hit target, or disable ladders.</p>
+<p><strong>Ranked tiers &amp; seasons</strong></p>
+<ul>
+<li>Elo per ladder (start 1000, K 32, K 48 for the first 10 games so new players place fast).</li>
+<li>Tiers: Bronze · Silver (900) · Gold (1100) · Platinum (1300) · Diamond (1500) · <strong>Zenith (1700)</strong>. Shown in menus, leaderboards and nametags, with &quot;X to next tier&quot; on your profile.</li>
+<li><strong>Rank up</strong> with a big title, sound and sparkles, plus a server announcement. A drop in tier gets a quiet heads-up.</li>
+<li><strong>Smart matchmaking</strong>: the allowed Elo gap starts at ±100 and widens 10 per second you wait (max ±600).</li>
+<li><strong>Anti-boosting</strong>: no Elo (and no rewards) after 3 games against the same player within an hour.</li>
+<li><strong>Seasons</strong>: end one by hand or set a <strong>season timer</strong> (e.g. 30 days). The top 3 of every ladder go into the hall of fame, everyone is soft-reset towards 1000 (you choose how much they keep), and with Zenith Economy the top 3 get <strong>season rewards</strong> ($1000 / $500 / $250 by default). The profile shows when the season ends.</li>
+</ul>
+<p><strong>Matches</strong></p>
+<ul>
+<li>Countdown titles with rising sounds, <strong>FIGHT!</strong>, round-won/lost titles, and Victory/Defeat screens with your Elo change.</li>
+<li><strong>Best of 3 / best of 5</strong>: a server-wide format, and players can pick their own format in duel requests.</li>
+<li><strong>Match recap</strong> after every match: hits landed, damage dealt and taken, longest combo, rounds and fight time, side by side with your opponent. Also in chat and with <code>/zenith_duels:recap</code>.</li>
+<li>Combo counter on the HUD, a hit tick for every Boxing hit.</li>
+<li>Time limit counts fighting time only (not breaks). At the limit, more rounds, then more hits / more health wins.</li>
+<li>Forfeit and leaving count as a loss. A player who rejoins is cleaned up and sent back.</li>
+<li><strong>Auto-reset arenas</strong>: save a snapshot once and the arena is restored after every round. Up to 20 arenas, each limited to chosen ladders.</li>
+<li>Outsiders can&#39;t interfere (arrows from the lobby do nothing). Drops never carry over between rounds.</li>
+</ul>
+<p><strong>Watch matches</strong></p>
+<ul>
+<li><strong>Watch a match</strong> from the menu or <code>/zenith_duels:watch</code>: a live list with scores and clocks. You watch in spectator mode from above the arena, with both players&#39; health on your screen, and go back exactly where you were afterwards.</li>
+</ul>
+<p><strong>Rematch</strong></p>
+<ul>
+<li>After every match both players see the recap with <strong>Rematch?</strong> for 10 seconds. If both accept, a new match starts on the same ladder and format.</li>
+</ul>
+<p><strong>Rewards (with Zenith Economy / Zenith Clans)</strong>
+These turn on by themselves when the other pack is installed on the same world, and are all adjustable.</p>
+<ul>
+<li>Coins for every win: $25 ranked, $5 unranked queue.</li>
+<li>Optional <strong>ranked entry fee</strong>. Refunded if the match ends before the fight starts.</li>
+<li><strong>Wagers</strong> on duel requests (up to $1000): the winner takes both stakes, a draw gives them back.</li>
+<li><strong>Clan points</strong> for the winner&#39;s clan on every ranked win (3 by default).</li>
+<li>Offline season winners get paid when they next join.</li>
+</ul>
+<p><strong>Players</strong></p>
+<ul>
+<li><strong>Kit editor</strong>: arrange each ladder&#39;s kit once and it&#39;s saved. Layouts adapt when an admin changes the kit.</li>
+<li><strong>Lobby hotbar</strong>: Ranked, Unranked, Kit Editor, Stats and Leaderboards. Locked in place.</li>
+<li>Profile with tier and Elo per ladder, W/L, rank position, season best, win streak and <strong>match history</strong>. Leaderboards per ladder, plus past seasons.</li>
+<li>HUD: opponent HP, hits, score, combo and clock in matches, search time and Elo range in the queue.</li>
+<li>Rank tag and <strong>clan tag</strong> (from Zenith Clans) in nametags. <strong>Floating Elo leaderboards</strong> you can place anywhere.</li>
+<li>Lobby protection: no PvP outside matches.</li>
+</ul>
+<h2>Setup (5 minutes)</h2>
+<ol>
+<li>Turn on the pack (Behavior Packs → <strong>Zenith Ranked Duels</strong>).</li>
+<li>As an operator: <code>/zenith_duels:setadmin @s true</code>, then <code>/zenith_duels:admin</code>.</li>
+<li><strong>Set lobby here</strong> while standing in your lobby.</li>
+<li><strong>Arenas → + New arena</strong>, then:<ul>
+<li>Stand on each side: <strong>Set spawn A here</strong> / <strong>Set spawn B here</strong>.</li>
+<li>For auto-reset: set <strong>box corner 1 and 2</strong> around the whole arena (max 64×384×64), then <strong>Save snapshot</strong>.</li>
+<li>Optional: <strong>Allowed ladders</strong> (e.g. only Sumo on your sumo platform).</li>
+</ul>
+</li>
+<li>Build at least one arena per ladder you want live, or let arenas allow all ladders.</li>
+<li>Optional: <strong>Leaderboards → Place board here</strong>, <strong>Seasons → Season settings</strong> for a season timer, <strong>Rewards</strong> for coins and clan points.</li>
+</ol>
+<h2>Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/zenith_duels:menu</code></td>
+<td>Everything in one menu</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:ranked</code> · <code>:unranked</code></td>
+<td>Pick a ladder and queue</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:leave</code></td>
+<td>Leave the queue</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:duel &lt;player&gt;</code> · <code>:accept</code> · <code>:deny</code></td>
+<td>Duel requests (unranked): pick ladder, format and wager</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:forfeit</code></td>
+<td>Give up the current match</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:watch</code></td>
+<td>Live matches you can watch</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:spectate [name]</code> · <code>:lobby</code></td>
+<td>Watch a player&#39;s match / go back</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:recap</code></td>
+<td>Your last match recap</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:kit</code></td>
+<td>Kit layout editor</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:stats [player]</code> · <code>:top</code></td>
+<td>Profile / leaderboards</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:admin</code></td>
+<td>Admin panel (admins)</td>
+</tr>
+<tr>
+<td><code>/zenith_duels:setadmin &lt;players&gt; &lt;true|false&gt;</code></td>
+<td>Give/remove admin (operators)</td>
+</tr>
+</tbody></table>
+<h2>Customization</h2>
+<p>Everything is set in-game from the admin panel and saved to the world. No files to edit.</p>
+<ul>
+<li><strong>Settings → Matches</strong>: countdown, format (single / best of 3 / best of 5), format choice in duel requests, time limit, rematch time, result screen time, instant respawn, recap in chat.</li>
+<li><strong>Settings → Ranked &amp; matchmaking</strong>: K-factors, Elo range start / growth / max, same-opponent limit, rank-up announcements.</li>
+<li><strong>Settings → Lobby &amp; display</strong>: unranked + duel requests, request timeout, lobby hotbar, lobby protection, HUD, rank + clan nametags, server type, lobby radius.</li>
+<li><strong>Rewards</strong>: coins per ranked / unranked win, ranked entry fee, max wager, clan points per ranked win.</li>
+<li><strong>Seasons</strong>: end a season now, season length (timer), how much Elo players keep, rewards for #1 / #2 / #3.</li>
+</ul>
+<p><strong>Rebrand add-on (+$2):</strong> we build the pack with <strong>your server&#39;s name</strong> in chat, menus, titles and the pack name (e.g. &quot;RoyalMC Ranked Duels&quot;). The license and the credit line stay with Zenith (&quot;Powered by Zenith&quot;).</p>
+<p><strong>Protected code:</strong> release builds are bundled and obfuscated. Redistribution, resale or modification isn&#39;t allowed. Your license covers your own Realms/servers.</p>
+<h2>Notes</h2>
+<ul>
+<li>The lobby is Adventure mode and matches are Survival, so UHC can build. The lobby hotbar clears the inventory. Turn <strong>Lobby hotbar items</strong> off if you run Duels in a survival world.</li>
+<li><strong>Shared worlds</strong>: with Zenith FFA or Zenith Events on the same world, Duels only looks after its own lobby area (change it under <strong>Server type</strong>). Players busy in an event are never pulled into the lobby, protected or queued. If someone queues or watches from outside the lobby, their own items are saved and given back (with names, enchantments and durability), and watchers return to where they stood.</li>
+<li>Entry fees and wagers need Zenith Economy&#39;s <strong>Scoreboard mirror</strong> setting (on by default).</li>
+<li>&quot;Instant respawn between rounds&quot; sets the <code>doImmediateRespawn</code> game rule. Turn it off to keep the death screen.</li>
+<li>Match state is in memory. After <code>/reload</code> or a restart, anyone mid-match is sent back and dirty arenas are reset.</li>
+</ul>
+<h2>Support</h2>
+<p>Questions, bugs or setup help? Open a ticket in our Discord: <strong>discord.gg/XKXP7hn5Hr</strong>. Every admin panel shows this link too.</p>
+<h2>Changelog</h2>
+<h3>1.2.0</h3>
+<ul>
+<li><strong>Rank-up celebrations</strong> with title, sound and sparkles. Tier names and &quot;to next tier&quot; in every menu.</li>
+<li><strong>Seasons</strong>: season timer, adjustable soft reset, season rewards with Zenith Economy, season countdown on the profile.</li>
+<li><strong>Match recap</strong> (hits, damage, longest combo, fight time) after every match, in the rematch screen and with <code>/zenith_duels:recap</code>.</li>
+<li><strong>Best of 3 / 5 per challenge</strong>: duel requests pick their own format, and can carry a <strong>wager</strong>.</li>
+<li><strong>Rewards</strong>: coins for wins, optional ranked entry fee, clan points with Zenith Clans.</li>
+<li><strong>Watch a match</strong> from a live list; watchers go back where they were with their items.</li>
+<li>Clan tags in nametags. Countdown, round and Boxing hit sounds. Combo counter on the HUD.</li>
+<li>Admin panel: settings in groups, Rewards page, watch or end any live match.</li>
+<li>Fixes: the time limit no longer counts breaks between rounds; watching a match no longer wipes your inventory; players can&#39;t force a draw on someone else&#39;s match with <code>/forfeit</code> while watching; a player leaving between rounds can&#39;t restart the match; your duel kit is no longer kept after a match when the lobby hotbar is off; Duels leaves players in Zenith Events alone and treats Events like FFA on shared worlds; Duels no longer overwrites other packs&#39; nametags outside its lobby.</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li><strong>Rematch</strong> prompt after every match.</li>
+<li>A support line in the admin panel.</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release.</li>
+</ul>
+</article>
+    <aside class="doc-side">
+      <div class="card">
+        <img src="assets/art/thumb-duels.png" alt="" width="320" height="240" style="width:100%;margin:-10px 0 6px">
+        <div class="eyebrow">Get it</div>
+        <div class="price" style="margin:10px 0 4px">$18 <small>/ from</small></div>
+        <p class="muted" style="margin:0 0 16px">One-time payment. Rebrand +$2.</p>
+        <a class="btn btn-gold" style="width:100%;justify-content:center" href="duels.html">View product</a>
+        <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:8px" data-discord href="https://discord.gg/XKXP7hn5Hr">Ask on Discord</a>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="eyebrow">All guides</div>
+        <div class="side-links"><a href="guide-ffa.html">🗡️ Zenith FFA</a><a href="guide-duels.html" class="on">⚔️ Zenith Ranked Duels</a><a href="guide-eco.html">💰 Zenith Economy</a><a href="guide-aw.html">✨ Zenith Ability Weapons</a><a href="guide-events.html">🏆 Zenith Events</a><a href="guide-clans.html">🛡️ Zenith Clans</a><a href="install.html">📥 How to install</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

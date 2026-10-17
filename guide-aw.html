@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith Ability Weapons Guide — Setup &amp; Commands</title>
+  <meta name="description" content="Setup, features, commands and settings for Zenith Ability Weapons (Minecraft Bedrock Edition).">
+  <meta property="og:title" content="Zenith Ability Weapons Guide — Setup &amp; Commands">
+  <meta property="og:description" content="Setup, features, commands and settings for Zenith Ability Weapons (Minecraft Bedrock Edition).">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/guide-aw.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/guide-aw.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="eyebrow">Guide · v1.2.0</div>
+  <h1>Zenith Ability Weapons</h1>
+  <p class="lead">7 ability weapons with custom art and particles, Forge upgrades I–V, clan-safe abilities and per-weapon tuning.</p>
+</header>
+<section class="doc-wrap">
+  <div class="wrap doc-grid">
+    <article class="doc"><h1>Zenith Ability Weapons</h1>
+<p>Seven custom weapons with real abilities for Minecraft Bedrock Edition, <strong>by Zenith</strong>. Each one has hand-drawn pixel art, custom particles, upgrade levels, a cooldown bar and settings you tune in-game. They&#39;re built to run smoothly on busy servers.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Version</td>
+<td>1.2.0</td>
+</tr>
+<tr>
+<td>Experiments</td>
+<td><strong>None needed.</strong> Turn the pack on and play.</td>
+</tr>
+<tr>
+<td>Game</td>
+<td>1.26.50+</td>
+</tr>
+<tr>
+<td>Works on</td>
+<td>Realms, single-player, hosted servers / BDS</td>
+</tr>
+<tr>
+<td>Packs</td>
+<td>Behavior + Resource (textures, particles). Apply both.</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td><code>zenith_aw</code></td>
+</tr>
+</tbody></table>
+<h2>The weapons</h2>
+<table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Ability</th>
+<th>What it does</th>
+<th>Cooldown</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Dash Blade</strong></td>
+<td>Gale Dash</td>
+<td>Dash forward. Enemies you pass through are damaged and knocked aside.</td>
+<td>8s</td>
+</tr>
+<tr>
+<td><strong>Inferno Sword</strong></td>
+<td>Ignite</td>
+<td>Flame stance for 6s. Your next hit explodes, burning the target and anyone close.</td>
+<td>12s</td>
+</tr>
+<tr>
+<td><strong>Venom Fang</strong></td>
+<td>Web Snare</td>
+<td>Pulls every enemy around you in, then poisons and slows them.</td>
+<td>14s</td>
+</tr>
+<tr>
+<td><strong>Volcano Axe</strong></td>
+<td>Eruption</td>
+<td>Leap up and slam down. Everything nearby is blasted up and set on fire.</td>
+<td>16s</td>
+</tr>
+<tr>
+<td><strong>Frost Scythe</strong></td>
+<td>Frost Nova</td>
+<td>Ice cone in front of you. Damages and freezes.</td>
+<td>12s</td>
+</tr>
+<tr>
+<td><strong>Storm Hammer</strong></td>
+<td>Thunderstrike</td>
+<td>Lightning on what you look at (24 blocks), chaining to 2 more enemies. Never starts fires.</td>
+<td>18s</td>
+</tr>
+<tr>
+<td><strong>Void Dagger</strong></td>
+<td>Blink</td>
+<td>Teleport up to 10 blocks. Your next hit within 3s deals bonus damage and blinds.</td>
+<td>9s</td>
+</tr>
+</tbody></table>
+<p>Use the weapon (right-click, or hold on mobile) to fire its ability. The cooldown shows on the hotbar slot like an ender pearl&#39;s, and as a bar on the action bar (<code>■■■■■□□□□□ 4.2s</code>) while you hold the weapon. A soft ping tells you when it&#39;s ready again.</p>
+<h2>Upgrades (levels I–V)</h2>
+<p>Every weapon can be upgraded from <strong>I</strong> up to <strong>V</strong> (admins can raise the cap to X).</p>
+<ul>
+<li>Each level adds <strong>+12% power</strong> (damage, radius, effect duration) and <strong>-6% cooldown</strong>.</li>
+<li>The level is saved <strong>on the item itself</strong>. It shows in the name (e.g. <em>Dash Blade III</em>) and in the lore with a level bar. Trade it, drop it, store it: it stays upgraded.</li>
+<li>Cost goes up each level. With <strong>Zenith Economy</strong> installed you pay in money (750, 1,500, 2,250, 3,000 by default; uses Economy&#39;s scoreboard mirror, which is on by default). Without it you pay in <strong>XP levels</strong> (5, 10, 15, 20). Admins can force XP.</li>
+<li>Upgrade from the Armory, from a weapon&#39;s page, or with <code>/zenith_aw:upgrade</code>. The menu lists every ability weapon in your inventory, held one first, with the before/after stats and the price.</li>
+</ul>
+<h2>Feedback</h2>
+<ul>
+<li><strong>Cooldown bar</strong> on the action bar while you hold a weapon that&#39;s recharging, plus a <strong>ready ping</strong>. Each player can turn either off for themselves in the Armory (<strong>My HUD</strong>).</li>
+<li><strong>Hit confirmation</strong>: a rising chime and <code>Hit 3</code> on the action bar when your ability lands.</li>
+<li><strong>Kill effects</strong>: a burst in your effect color and a bell when an ability kill lands, <code>KO</code> on the action bar.</li>
+<li><strong>Ability kill streaks</strong>: a small title at 2, 3, 5, 7 and 10 player kills (then every 5). Never more than one every 2 seconds. With Zenith FFA it waits for FFA&#39;s own kill title instead of covering it.</li>
+</ul>
+<h2>Leaderboard</h2>
+<p>Casts, player kills and mob kills per weapon, per player. Open it with <code>/zenith_aw:stats</code> or from the Armory. A kill counts for a weapon when it lands within a few seconds of that weapon&#39;s ability hit (so burning and poison kills count). Players in a Zenith Duel or Event don&#39;t add to the stats.</p>
+<h2>Customization</h2>
+<p>Everything is set in-game from the admin panel (<strong>Forge</strong>, <code>/zenith_aw:forge</code>) and saved to the world. No files to edit.</p>
+<p><strong>Per weapon:</strong></p>
+<ul>
+<li>On/off</li>
+<li>Cooldown (1–60s)</li>
+<li><strong>Power</strong> 25–200%: damage, range and effect duration</li>
+<li><strong>Damage multiplier</strong> 25–300%: damage only</li>
+<li>Effect color (11 presets or the weapon&#39;s own)</li>
+<li>Give to any player, at any level</li>
+<li>Reset to defaults</li>
+</ul>
+<p><strong>Settings:</strong></p>
+<ul>
+<li>Activation: plain use, or sneak + use</li>
+<li>Abilities hit players and/or mobs</li>
+<li><strong>Clan-safe</strong> (on by default): abilities skip your clanmates and allied clans from Zenith Clans, including fire, poison, freeze and knockback</li>
+<li>No-ability radius around the world spawn</li>
+<li>Let players pick their own effect color</li>
+<li>Switch hints</li>
+</ul>
+<p><strong>Upgrades:</strong> on/off, max level (2–10), power and cooldown per level, pay with Economy money or XP, cost per level, and set the level of the weapon you&#39;re holding.</p>
+<p><strong>No-ability zones:</strong> stand somewhere, tap <strong>Add a zone here</strong>, pick a radius. Nobody can use abilities inside, and nobody inside can be hit by them (blink and lightning can&#39;t target a zone either). Zones cover all heights. Up to 50 zones. Players tagged <code>zenith_aw:noability</code> can&#39;t use abilities anywhere.</p>
+<p><strong>Feedback:</strong> cooldown bar, ready ping, hit confirmation and streak titles, each on/off for the whole server.</p>
+<p><strong>Players (Armory, <code>/zenith_aw:armory</code>)</strong>: browse every weapon with its ability and stats, upgrade weapons, see the leaderboard, pick a personal <strong>effect color</strong>, and set their own HUD.</p>
+<h2>Optimization</h2>
+<ul>
+<li><strong>No per-tick loops.</strong> Abilities run on events. The only timers run for players with a cooldown or stance active, a few times a second.</li>
+<li><strong>Native cooldowns</strong>: the game&#39;s own hotbar cooldown, with an action-bar bar only while you hold the weapon.</li>
+<li><strong>Particle quality</strong> Low / Medium / High: scales every effect&#39;s particle count and trail density. Use Low for big servers or low-end phones.</li>
+<li><strong>Server-wide cast cap</strong> (default 30 casts/second) stops ability spam from lagging the server.</li>
+<li>Abilities that find no target (no room to blink, nothing to strike) fail without using the cooldown.</li>
+<li>Stats are kept in memory and saved in batches.</li>
+<li>Every effect is tinted from 2 tiny shared textures. No huge particle files.</li>
+</ul>
+<h2>Works with the other Zenith packs</h2>
+<p>Install them together and these appear automatically:</p>
+<ul>
+<li><strong>Ranked Duels</strong>: a new <strong>Abilities</strong> ladder (Dash Blade + Inferno Sword + Frost Scythe) with its own Elo. Abilities can&#39;t fire during the frozen countdown. Duel kits are always level I, so ranked stays fair.</li>
+<li><strong>Economy</strong>: an <strong>Ability Weapons</strong> shop category ($1,500–$3,200), and upgrades are paid in Economy money.</li>
+<li><strong>FFA</strong>: four weapons in the coin shop, plus a gold burst on every kill. The FFA menu links to the Armory.</li>
+<li><strong>Clans</strong>: clan-safe abilities (see Customization).</li>
+<li>Ability damage counts as your hit, so FFA kills, streaks, bounties and Duels wins all work. FFA&#39;s safe zone still protects players.</li>
+</ul>
+<p>Without this pack installed, those extras are hidden.</p>
+<h2>Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Who</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/zenith_aw:armory</code></td>
+<td>Everyone</td>
+<td>Browse weapons, upgrade, leaderboard, effect color, HUD</td>
+</tr>
+<tr>
+<td><code>/zenith_aw:upgrade</code></td>
+<td>Everyone</td>
+<td>Upgrade an ability weapon in your inventory</td>
+</tr>
+<tr>
+<td><code>/zenith_aw:stats</code></td>
+<td>Everyone</td>
+<td>Leaderboard per weapon</td>
+</tr>
+<tr>
+<td><code>/zenith_aw:forge</code></td>
+<td>Admins</td>
+<td>Tune, give, settings, upgrades, zones, feedback, optimization</td>
+</tr>
+<tr>
+<td><code>/zenith_aw:give &lt;players&gt; &lt;weapon&gt; [level]</code></td>
+<td>Operators, command blocks, NPCs</td>
+<td>Give a weapon (e.g. <code>dash_blade 3</code>)</td>
+</tr>
+<tr>
+<td><code>/zenith_aw:setadmin &lt;players&gt; &lt;true|false&gt;</code></td>
+<td>Operators</td>
+<td>Give/remove admin</td>
+</tr>
+</tbody></table>
+<p>Weapons are also in the creative inventory (Equipment tab).</p>
+<h2>Rebrand &amp; license</h2>
+<p><strong>Rebrand add-on (+$2):</strong> we build the pack with <strong>your server&#39;s name</strong> in chat, menus, titles and the pack name (e.g. &quot;RoyalMC Ability Weapons&quot;). The license and the credit line stay with Zenith (&quot;Powered by Zenith&quot;).</p>
+<p><strong>Protected code:</strong> release builds are bundled and obfuscated. Redistribution, resale or modification isn&#39;t allowed. Your license covers your own Realms/servers.</p>
+<h2>Support</h2>
+<p>Questions, bugs or setup help? Open a ticket in our Discord: <strong>discord.gg/XKXP7hn5Hr</strong>. Every admin panel shows this link too.</p>
+<h2>Changelog</h2>
+<h3>1.2.0</h3>
+<ul>
+<li><strong>Upgrade levels I–V</strong>: stronger abilities and shorter cooldowns per level, saved on the item and shown in its name and lore. Paid with Economy money, or XP levels without Economy.</li>
+<li><strong>Cooldown bar</strong> on the action bar with a ready ping, and a per-player HUD toggle.</li>
+<li><strong>Hit and kill feedback</strong>: hit chime with <code>Hit 3</code>, kill bursts, ability kill streak titles.</li>
+<li><strong>Leaderboard</strong>: casts and kills per weapon (<code>/zenith_aw:stats</code>).</li>
+<li><strong>Damage multiplier</strong> per weapon in the Forge, and give weapons at any level (also <code>/zenith_aw:give … [level]</code>).</li>
+<li><strong>Clan-safe abilities</strong>: clanmates and allies aren&#39;t hit (on by default).</li>
+<li><strong>No-ability zones</strong> placed from the Forge, plus a <code>zenith_aw:noability</code> tag. Players inside a zone can&#39;t be hit by abilities.</li>
+<li>Fixed: Ignite and Blink bonus damage was often swallowed by the hit&#39;s invulnerability frames.</li>
+<li>Fixed: Ignite and Blink bonus hits ignored the &quot;hit players / hit mobs&quot; settings and could hit creative players or pets.</li>
+<li>Abilities no longer hit your own tamed pets. Blink works through grass and snow layers.</li>
+<li>Players in a duel or event don&#39;t count toward stats.</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li>Stronger code protection.</li>
+<li>A support line in the Forge.</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release: 7 weapons, custom art and particles, Armory, Forge, optimization settings, integration with FFA, Duels and Economy.</li>
+</ul>
+</article>
+    <aside class="doc-side">
+      <div class="card">
+        <img src="assets/art/thumb-aw.png" alt="" width="320" height="240" style="width:100%;margin:-10px 0 6px">
+        <div class="eyebrow">Get it</div>
+        <div class="price" style="margin:10px 0 4px">$15 <small>/ from</small></div>
+        <p class="muted" style="margin:0 0 16px">One-time payment. Rebrand +$2.</p>
+        <a class="btn btn-gold" style="width:100%;justify-content:center" href="aw.html">View product</a>
+        <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:8px" data-discord href="https://discord.gg/XKXP7hn5Hr">Ask on Discord</a>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="eyebrow">All guides</div>
+        <div class="side-links"><a href="guide-ffa.html">🗡️ Zenith FFA</a><a href="guide-duels.html">⚔️ Zenith Ranked Duels</a><a href="guide-eco.html">💰 Zenith Economy</a><a href="guide-aw.html" class="on">✨ Zenith Ability Weapons</a><a href="guide-events.html">🏆 Zenith Events</a><a href="guide-clans.html">🛡️ Zenith Clans</a><a href="install.html">📥 How to install</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

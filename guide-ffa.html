@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith FFA Guide — Setup &amp; Commands</title>
+  <meta name="description" content="Setup, features, commands and settings for Zenith FFA (Minecraft Bedrock Edition).">
+  <meta property="og:title" content="Zenith FFA Guide — Setup &amp; Commands">
+  <meta property="og:description" content="Setup, features, commands and settings for Zenith FFA (Minecraft Bedrock Edition).">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/guide-ffa.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/guide-ffa.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="eyebrow">Guide · v1.2.0</div>
+  <h1>Zenith FFA</h1>
+  <p class="lead">Open-world FFA core: kit layouts, coins, bounties, killstreak rewards, ranks, NPCs, anti-dupe and live leaderboards.</p>
+</header>
+<section class="doc-wrap">
+  <div class="wrap doc-grid">
+    <article class="doc"><p>An open-world free-for-all PvP core for Minecraft Bedrock Edition, <strong>by Zenith</strong>. Players spawn, grab their kit in their own layout, and fight. Kills earn coins, streaks unlock rewards and put bounties on heads, and coins buy gear in the shop. Ranks, nicknames, NPCs, world protection and moderation are built in. You set everything up in-game, with no command blocks and no experiments.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Version</td>
+<td>1.2.0</td>
+</tr>
+<tr>
+<td>Experiments</td>
+<td><strong>None needed.</strong> Turn the pack on and play.</td>
+</tr>
+<tr>
+<td>Game</td>
+<td>1.26.50+</td>
+</tr>
+<tr>
+<td>Works on</td>
+<td>Realms, single-player, hosted servers / BDS</td>
+</tr>
+<tr>
+<td>Resource pack</td>
+<td>Not needed</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td><code>zenith_ffa</code></td>
+</tr>
+</tbody></table>
+<h2>Features</h2>
+<p><strong>Kits</strong></p>
+<ul>
+<li>One main kit, saved from your own inventory (enchants, names and lore kept). <strong>Rank kits</strong> are locked to a rank or tag such as <code>vip</code>.</li>
+<li><strong>Personal layouts</strong>: players arrange their kit once and save it. If an admin changes the kit later, layouts repair themselves: items keep their slots and new items fill free ones.</li>
+<li><strong>Claim kits</strong>: one-off bundles (e.g. a VIP pack) with a cooldown in hours and an optional claim limit. Players need enough free slots, so nothing is lost.</li>
+<li>Auto kit on respawn, plus per-kit kill rewards (golden apple, arrows).</li>
+</ul>
+<p><strong>Combat</strong></p>
+<ul>
+<li>Kill feed showing the killer&#39;s hearts. Void, lava and fall kills go to the last player who hit you.</li>
+<li>Combat tag (12s): <code>/kit</code>, <code>/spawn</code> and <code>/shop</code> are blocked while in combat. <strong>Logging out in combat</strong> counts as a death and gives the kill away.</li>
+<li>Heal on kill, cleared drops, no hunger. Streak announcements at milestones you choose.</li>
+<li><strong>Killstreak rewards</strong>: reach a streak and get bonus coins, a potion effect and/or an item. Built-in: 3 kills (+10 coins), 5 (+20, Speed I), 10 (+50, Strength I), 25 (+150, Regeneration II, 3 golden apples). Add, edit or remove any streak. The player gets a big title and sound, and the whole server sees the shout-out.</li>
+<li><strong>Kill effects</strong>: players pick a burst that plays where their victim falls: Classic, Lightning, Flames, Hearts, Gold Burst, Souls, Explosion, Frost (or None). Lock any effect to a rank (that rank and higher ranks can use it) or hide it. Lightning starts locked to MVP and Gold Burst to VIP.</li>
+</ul>
+<p><strong>Coins</strong> (stored as data, not an item, so they can&#39;t be duped, dropped or lost)</p>
+<ul>
+<li>Coins per kill, plus a streak bonus.</li>
+<li><strong>Revenge bonus</strong> for killing the player who last killed you.</li>
+<li><strong>Daily reward</strong> with a 7-day login streak.</li>
+<li><strong>Shop</strong> with <strong>categories</strong>: items and potion effects. Admins add whatever they&#39;re holding, or any effect, and can file each entry under a category. If your inventory is full, buying an item is refused before you pay.</li>
+<li><strong>One wallet with Zenith Economy</strong>: when Economy is on the same world, FFA pays into and spends from the Economy balance, and Economy&#39;s daily reward and bounties are used.</li>
+</ul>
+<p><strong>Bounties</strong></p>
+<ul>
+<li>Every 5-kill streak puts coins on your head. <strong>Players can place their own bounties</strong> too (minimum 25 coins, you choose).</li>
+<li>Bounties <strong>stay until someone claims them</strong>. Logging out or dying to lava doesn&#39;t clear yours. Whoever kills you collects all of it.</li>
+<li><strong>Bounty board</strong>: every bounty, highest first, across as many pages as needed, with online/offline status and a tap-through to each player&#39;s profile.</li>
+<li>Bounties show in nametags, the sidebar, and on a <strong>Top Bounties</strong> floating board.</li>
+</ul>
+<p><strong>Ranks &amp; nicknames</strong></p>
+<ul>
+<li>8 built-in ranks (Owner, Admin, Mod, Helper, Media, Legend, MVP, VIP). Create your own with colors and a weight (higher shows first). Up to 3 ranks per player.</li>
+<li>Ranks show in nametags and the kill feed, unlock rank kits, claim kits and kill effects, and add the tag <code>zenith_rank:&lt;id&gt;</code> so other packs and command blocks can read them. Adding that tag with a command (from a store, for example) gives the rank on the player&#39;s next join.</li>
+<li>Nicknames (letters, numbers, spaces, <code>.</code> <code>-</code> <code>_</code>). Nobody can take another player&#39;s name.</li>
+<li>Ranks show above heads, not in chat: Minecraft doesn&#39;t let add-ons change chat messages without experiments.</li>
+</ul>
+<p><strong>Spawn</strong></p>
+<ul>
+<li><strong>Safe zone</strong> around spawn: no PvP for untagged players, melee or arrows. Anyone who runs to spawn mid-fight stays hittable, and nobody can shoot out of the zone.</li>
+<li><code>/spawn</code> with a 5-second stand-still warmup that cancels if you move or get hit.</li>
+</ul>
+<p><strong>NPCs</strong></p>
+<ul>
+<li>Place NPCs that open the FFA menu, kits, claim kits, shop, daily reward, leaderboards, profile or bounty board. Players can&#39;t hurt or edit them.</li>
+</ul>
+<p><strong>World protection</strong></p>
+<ul>
+<li>Anti-break and anti-place with an <strong>allow-list</strong> (tap a block to allow it; cobwebs are allowed by default).</li>
+<li><strong>Build height limit</strong>.</li>
+<li><strong>Anti-dupe</strong>: blocks the disconnect cursor dupe and trims over-stacked items.</li>
+<li>Builders (tag <code>zenith_ffa:builder</code>) and creative players can always build.</li>
+</ul>
+<p><strong>Moderation</strong></p>
+<ul>
+<li><strong>Warnings</strong> with reasons, kept per player (last 10). Players see a big warning title. <strong>Auto-kick</strong> at a number of warnings you choose.</li>
+<li><strong>Anti-AFK</strong>: after N seconds without moving, send to spawn, kick, or just mark them <code>[AFK]</code>, with a warning title first. Players in combat never count as AFK; tag <code>zenith_ffa:afk_bypass</code> skips the check.</li>
+</ul>
+<p><strong>Display</strong></p>
+<ul>
+<li><strong>Info sidebar</strong>: online count, top killer, hottest live streak, biggest bounty, and your Discord and address lines.</li>
+<li><strong>Nametags</strong> showing rank, clan tag (with Zenith Clans), HP, streak and bounty.</li>
+<li><strong>Action-bar HUD</strong> showing coins, streak, K/D, and a combat timer or &quot;Safe&quot; indicator.</li>
+<li><strong>Floating leaderboards</strong> you place anywhere: Top Kills, Best Streaks, Best K/D, Most Deaths, Richest, Top Bounties. They update live.</li>
+<li><strong>Player profile</strong>: kills, deaths, K/D, best and current streak, coins, bounty, ranks and leaderboard place, for you or anyone (online or offline). Your own profile is where you pick your kill effect.</li>
+<li>A &quot;+1 KILL · +12 coins&quot; title on every kill.</li>
+</ul>
+<p><strong>Arena resets</strong></p>
+<ul>
+<li>Set <strong>corner 1 and corner 2</strong>, choose <strong>what to fill</strong> (any block, or the block in your hand), and optionally <strong>replace only</strong> certain blocks. The default clears player-placed cobblestone, webs, lava, water and fire, and never touches your map.</li>
+<li>Big arenas never lag: the reset is cut into fills of <strong>N blocks</strong> (256–32,768) with <strong>N ticks</strong> between them. The panel shows how many fills it takes and how long.</li>
+<li><strong>Auto-reset every N minutes</strong> with countdown warnings in chat. Optionally move players inside to spawn first. Up to 10 zones, and dropped items are cleared too.</li>
+</ul>
+<p><strong>Works with other Zenith packs</strong></p>
+<ul>
+<li><strong>Zenith Economy</strong>: one shared wallet (see Coins).</li>
+<li><strong>Zenith Duels and Zenith Events</strong>: players in a duel or event are left alone. FFA doesn&#39;t count their kills, deaths, streaks or bounties, doesn&#39;t send them to FFA spawn or give them the kit, and skips the safe zone, AFK check and protection for them.</li>
+<li><strong>Zenith Clans</strong>: clan tags show in FFA nametags.</li>
+<li><strong>Zenith Ability Weapons</strong>: four weapons appear in the coin shop, and the Classic and Gold Burst kill effects get a gold particle burst.</li>
+<li>The FFA menu links to each of these packs&#39; menus when they&#39;re installed.</li>
+</ul>
+<p>All data survives <code>/reload</code>, relogs and restarts. Admins edit everything in-game.</p>
+<h2>Setup (2 minutes)</h2>
+<ol>
+<li>Turn on the pack (Behavior Packs → <strong>Zenith FFA</strong>).</li>
+<li>As an operator: <code>/zenith_ffa:setadmin @s true</code></li>
+<li><code>/zenith_ffa:admin</code>:<ul>
+<li><strong>Spawn &amp; safe zone</strong>: stand at spawn and tick &quot;Set spawn to where I&#39;m standing&quot;.</li>
+<li><strong>Kits</strong>: wear and hold your kit, then &quot;Set main kit from my inventory&quot;.</li>
+<li><strong>Leaderboards</strong>: place a board or two.</li>
+<li><strong>Settings → Sidebar, nametags &amp; HUD</strong>: add your Discord and address to the sidebar.</li>
+</ul>
+</li>
+<li>Optional: give staff their ranks (<strong>Ranks &amp; nicknames</strong>), place NPCs at spawn (<strong>NPCs</strong>), and check <strong>Protection</strong> before players arrive.</li>
+<li>Done. Players use <code>/zenith_ffa:menu</code>.</li>
+</ol>
+<h2>Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Who</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/zenith_ffa:menu</code></td>
+<td>Everyone</td>
+<td>One menu for everything</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:kit</code></td>
+<td>Everyone</td>
+<td>Get kit, save or reset layout, choose a rank kit, claim kits</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:claim</code></td>
+<td>Everyone</td>
+<td>Claim kits (VIP packs and other bundles)</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:shop</code></td>
+<td>Everyone</td>
+<td>Spend coins</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:daily</code></td>
+<td>Everyone</td>
+<td>Daily coins (login streak)</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:spawn</code></td>
+<td>Everyone</td>
+<td>Warp to spawn (warmup)</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:stats [player]</code></td>
+<td>Everyone</td>
+<td>Profile and stats card</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:top</code></td>
+<td>Everyone</td>
+<td>Leaderboards</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:bounty</code></td>
+<td>Everyone</td>
+<td>Bounty board: all bounties, place your own</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:effects</code></td>
+<td>Everyone</td>
+<td>Pick your kill effect</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:admin</code></td>
+<td>Admins</td>
+<td>Admin panel</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:rank &lt;player&gt; &lt;rank&gt; [remove]</code></td>
+<td>Admins</td>
+<td>Give a rank, or take it with <code>true</code></td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:nick &lt;player&gt; [nickname]</code></td>
+<td>Admins</td>
+<td>Set a nickname (leave it out to remove)</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:warn &lt;player&gt; &lt;reason&gt;</code></td>
+<td>Admins</td>
+<td>Warn a player</td>
+</tr>
+<tr>
+<td><code>/zenith_ffa:setadmin &lt;players&gt; &lt;true|false&gt;</code></td>
+<td>Operators</td>
+<td>Give/remove admin</td>
+</tr>
+</tbody></table>
+<p>Kit, claim, shop and spawn are blocked in combat (you can turn this off) and for players in a duel or event.</p>
+<h2>Admin panel</h2>
+<ul>
+<li><strong>Spawn &amp; safe zone</strong>: set spawn, safe zone radius, warmup, respawn and join behavior.</li>
+<li><strong>Kits</strong>: main kit, rank kits, claim kits, preview, reset.</li>
+<li><strong>Shop</strong>: sell the held item or an effect (with a category), remove, reset.</li>
+<li><strong>Leaderboards</strong>: place any board type, remove the nearest, refresh.</li>
+<li><strong>Streaks &amp; bounties</strong>: add, edit and delete killstreak rewards (coins, effect, held item); reward announcements; streak milestones; streak bounty size and frequency; player bounties and minimum; remove one bounty or all.</li>
+<li><strong>Kill effects</strong>: turn them on or off, lock each effect to a rank or hide it, unlock all.</li>
+<li><strong>Arena resets</strong>: zones, corners, fill block, replace-only list, fill size and speed, auto timer, warnings, evacuation.</li>
+<li><strong>Protection</strong>: anti-break/place, allow-list, build limit, anti-dupe, builder mode.</li>
+<li><strong>Ranks &amp; nicknames</strong>: give, take, nickname, create/edit, delete, reset.</li>
+<li><strong>NPCs</strong>: place any NPC type, remove the nearest.</li>
+<li><strong>Moderation</strong>: warn, view and clear warnings, kick limit, AFK time, action and warning.</li>
+<li><strong>Settings</strong>: Combat &amp; kits, Coins &amp; daily reward, Sidebar/nametags/HUD, reset all.</li>
+<li><strong>Players</strong>: give/take coins, reset all stats and bounties.</li>
+</ul>
+<h2>Customization</h2>
+<p>Everything is set in-game from the admin panel and saved to the world. No files to edit.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Combat tag / block kit, shop, spawn in combat / combat log = death</td>
+<td>12s / on / on</td>
+</tr>
+<tr>
+<td>Heal on kill / clear drops / no hunger / auto kit on respawn and join</td>
+<td>on / on / on / on</td>
+</tr>
+<tr>
+<td>Coins per kill / streak bonus per kill (stops at streak) / revenge bonus</td>
+<td>5 / 1 (10) / 5</td>
+</tr>
+<tr>
+<td>Daily: day 1 / extra per day / streak days</td>
+<td>20 / 5 / 7</td>
+</tr>
+<tr>
+<td>Killstreak rewards / announced</td>
+<td>3, 5, 10, 25 / on</td>
+</tr>
+<tr>
+<td>Streak announcements</td>
+<td>5, 10, 15, 20, 25, 30, 40, 50</td>
+</tr>
+<tr>
+<td>Streak bounty / player bounties (minimum)</td>
+<td>+25 every 5 kills / on (25)</td>
+</tr>
+<tr>
+<td>Kill effects / locked</td>
+<td>on / Lightning: MVP, Gold Burst: VIP</td>
+</tr>
+<tr>
+<td>Safe zone radius / spawn warmup / respawn at spawn / spawn on join</td>
+<td>12 / 5s / on / on</td>
+</tr>
+<tr>
+<td>Anti-break &amp; place / allowed blocks / build limit / anti-dupe</td>
+<td>on / cobweb / Y 320 / on</td>
+</tr>
+<tr>
+<td>AFK after / action / warning before / kick at warnings</td>
+<td>300s / send to spawn / 30s / 3</td>
+</tr>
+<tr>
+<td>Sidebar / nametags / HUD / kill title / ranks shown</td>
+<td>on / on / on / on / on</td>
+</tr>
+</tbody></table>
+<p>Tags you can use: <code>zenith_ffa:admin</code> (admin panel), <code>zenith_ffa:builder</code> (ignores protection), <code>zenith_ffa:afk_bypass</code> (never AFK), <code>zenith_rank:&lt;id&gt;</code> (gives that rank on join).</p>
+<p><strong>Rebrand add-on (+$2):</strong> we build the pack with <strong>your server&#39;s name</strong> in chat, menus, titles and the pack name (e.g. &quot;RoyalMC FFA&quot;). The license and the credit line stay with Zenith (&quot;Powered by Zenith&quot;).</p>
+<p><strong>Protected code:</strong> release builds are bundled and obfuscated. Redistribution, resale or modification isn&#39;t allowed. Your license covers your own Realms/servers.</p>
+<h2>Notes</h2>
+<ul>
+<li>The sidebar uses the <code>zenith_ffa:sidebar</code> objective. Turn it off in Settings if you use the sidebar for something else.</li>
+<li>Nametags replace the player&#39;s name tag text. Turn them off to show just rank, clan tag and name.</li>
+<li>Floating leaderboards are a pack entity (<code>zenith_ffa:text</code>). If one doesn&#39;t appear, reopen the world once after adding the pack.</li>
+<li>NPCs use the game&#39;s own NPC. Remove one from <strong>Admin → NPCs</strong> while standing next to it.</li>
+<li>Kill effects show for everyone nearby. If your server is very busy, lock the bigger ones (Explosion, Lightning) to a rank or hide them.</li>
+</ul>
+<h2>Support</h2>
+<p>Questions, bugs or setup help? Open a ticket in our Discord: <strong>discord.gg/XKXP7hn5Hr</strong>. Every admin panel shows this link too.</p>
+<h2>Changelog</h2>
+<h3>1.2.0</h3>
+<ul>
+<li><strong>Killstreak rewards</strong>: coins, potion effects and items at the streaks you choose (3 / 5 / 10 / 25 built in), with a title and sound for the player and a server-wide shout-out. Edit them in <strong>Admin → Streaks &amp; bounties</strong>.</li>
+<li><strong>Kill effects</strong>: 8 effects (Lightning, Flames, Hearts, Gold Burst, Souls, Explosion, Frost, Classic) that play where your victim falls. Pick one in your profile or with <code>/zenith_ffa:effects</code>, with a private preview. Admins lock effects to a rank or hide them.</li>
+<li><strong>Bounty board</strong> (<code>/zenith_ffa:bounty</code>): every bounty on pages, place your own bounty, and a <strong>Top Bounties</strong> floating board. Bounties now stay until claimed instead of vanishing when the player logs out or dies to the environment.</li>
+<li><strong>Ranks &amp; nicknames</strong>: built-in and custom ranks in nametags and the kill feed, rank kits and claim kits by rank, <code>zenith_rank:&lt;id&gt;</code> tags (adding the tag yourself grants the rank), nicknames, and <code>/zenith_ffa:rank</code> and <code>/zenith_ffa:nick</code>.</li>
+<li><strong>Claim kits</strong> with cooldowns and claim limits (<code>/zenith_ffa:claim</code>).</li>
+<li><strong>NPCs</strong> for the menu, kits, claim kits, shop, daily reward, leaderboards, profile and bounty board.</li>
+<li><strong>World protection</strong>: anti-break and anti-place with an allow-list, build height limit, anti-dupe.</li>
+<li><strong>Moderation</strong>: warnings with auto-kick (<code>/zenith_ffa:warn</code>) and anti-AFK.</li>
+<li><strong>Zenith Economy wallet</strong>: one balance across the server when Economy is installed.</li>
+<li><strong>Shop categories</strong>, a <strong>Most Deaths</strong> leaderboard, and a profile screen that works for offline players too.</li>
+<li><strong>Plays nicely with Zenith Duels and Events</strong>: players in a duel or event are ignored by FFA&#39;s stats, streaks, bounties, spawn, kit, safe zone, AFK check and protection.</li>
+<li>Settings split into pages (Combat &amp; kits, Coins &amp; daily, Display) with more options: streak bonus, daily per-day and streak length, show ranks.</li>
+<li>Polish: success and error sounds on every action, titles for rewards and claims, confirm before buying or placing a bounty, Back buttons that return where you came from.</li>
+<li>Fixes: editing the shop without Ability Weapons installed no longer deletes its weapons from the shop; buying with a full inventory no longer loses the item; claim kits check for free slots first; the safe zone now cancels hits (including arrows) instead of healing them back; AFK players sent to spawn are no longer welcomed back instantly; nicknames can&#39;t copy another player&#39;s name; tapping an NPC twice quickly no longer opens two menus; build limit checks the exact block being placed; faster nametags and leaderboards on busy servers.</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li><strong>Arena resets</strong>: corner-to-corner fills with block choice, replace-only filter, blocks-per-fill and tick-delay control, auto timer, warnings, evacuation.</li>
+<li>A support line in the admin panel.</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release.</li>
+</ul>
+</article>
+    <aside class="doc-side">
+      <div class="card">
+        <img src="assets/art/thumb-ffa.png" alt="" width="320" height="240" style="width:100%;margin:-10px 0 6px">
+        <div class="eyebrow">Get it</div>
+        <div class="price" style="margin:10px 0 4px">$12 <small>/ from</small></div>
+        <p class="muted" style="margin:0 0 16px">One-time payment. Rebrand +$2.</p>
+        <a class="btn btn-gold" style="width:100%;justify-content:center" href="ffa.html">View product</a>
+        <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:8px" data-discord href="https://discord.gg/XKXP7hn5Hr">Ask on Discord</a>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="eyebrow">All guides</div>
+        <div class="side-links"><a href="guide-ffa.html" class="on">🗡️ Zenith FFA</a><a href="guide-duels.html">⚔️ Zenith Ranked Duels</a><a href="guide-eco.html">💰 Zenith Economy</a><a href="guide-aw.html">✨ Zenith Ability Weapons</a><a href="guide-events.html">🏆 Zenith Events</a><a href="guide-clans.html">🛡️ Zenith Clans</a><a href="install.html">📥 How to install</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

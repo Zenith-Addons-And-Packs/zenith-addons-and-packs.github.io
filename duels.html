@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith Ranked Duels — Bedrock 1v1</title>
+  <meta name="description" content="Zenith Ranked Duels: Elo-ranked 1v1 PvP for Minecraft Bedrock Edition. 5 ladders, Bronze to Zenith ranks, self-resetting arenas, seasons, kit editor. No experiments needed., Realm-safe.">
+  <meta property="og:title" content="Zenith Ranked Duels — Bedrock 1v1">
+  <meta property="og:description" content="Elo matchmaking, 5 ladders, auto-reset arenas, seasons. Realm-safe, no experiments.">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og-duels.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/duels.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/duels.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+<nav class="subnav" aria-label="Zenith Ranked Duels sections">
+  <div class="wrap">
+    <b>Zenith Ranked Duels</b>
+    <a href="#features">Features</a><a href="#editions">Pricing</a><a href="#setup">Setup</a><a href="#commands">Commands</a><a href="guide-duels.html">Full guide</a>
+    <a class="btn btn-gold btn-sm" data-discord href="#editions">Buy for $18</a>
+  </div>
+</nav>
+
+<header class="wrap p-hero">
+  <div>
+    <div class="eyebrow">Zenith Ranked Duels · v1.2</div>
+    <h1 style="margin-top:14px">Climb from Bronze<br><span class="grad">to Zenith.</span></h1>
+    <p class="lead">Real ranked 1v1 for your Bedrock Realm or server. Elo matchmaking, ladders with their own ranks, best-of matches, wagers, seasons with rewards and arenas that reset themselves. Set it up in-game, with no experiments.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" data-discord href="#editions">Buy for $18</a>
+      <a class="btn btn-ghost" href="#features">See features</a>
+    </div>
+    <div class="meta">
+      <span class="badge">No experiments</span>
+      <span class="badge">Realms ✓</span>
+      <span class="badge">No resource pack</span>
+      <span class="badge">1.26.50+</span>
+    </div>
+  </div>
+  <div class="screen" aria-label="In-game preview: floating Elo board, match results and HUD">
+    <img class="scene" src="assets/art/duels.svg" alt="" width="640" height="480">
+    <div class="sidebar">
+      <b>SWORD ELO</b>
+      <div><span class="c-white">#1 Astra</span><span class="c-gold">1782</span></div>
+      <div><span class="c-white">#2 Nova</span><span class="c-gold">1655</span></div>
+      <div><span class="c-white">#3 Kairo</span><span class="c-gold">1540</span></div>
+      <div><span class="c-white">#4 Blaze</span><span class="c-gold">1398</span></div>
+    </div>
+    <div class="chat">
+      <div><span class="c-dark">»</span> <span class="c-gold">Ranked Sword</span> <span class="c-gray">vs</span> <span class="c-white">Nova</span> <span class="c-dark">(</span><span class="c-gold">1655</span><span class="c-dark">)</span></div>
+      <div><span class="c-dark">»</span> <span style="color:var(--green)">Won</span> <span class="c-gray">vs</span> <span class="c-white">Nova 2-1</span> <span class="c-dark">·</span> <span style="color:var(--green)">+17</span> <span class="c-dark">(</span><span class="c-gold">1782</span><span class="c-dark">)</span></div>
+      <div><span class="c-gold">Astra</span> <span class="c-gray">ranked up to</span> <span class="c-gold"><b>Zenith</b></span> <span class="c-gray">in Sword!</span></div>
+    </div>
+    <div class="bar"><span class="c-gray">vs</span> <span class="c-white">Nova</span> <span class="c-dark">|</span> <span class="c-red">6.5❤</span> <span class="c-dark">|</span> <span class="c-yel">1-1</span> <span class="c-dark">|</span> <span class="c-gray">3:42</span></div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Features</div>
+      <h2>Ranked, the way it should be</h2>
+      <p>Fair matchmaking, arenas that never break, and a reason to keep climbing.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card feature reveal"><h3><span>⚔️</span>Ladders with their own Elo</h3><p>Sword, Axe, UHC, <strong>Boxing</strong> (first to 100 hits) and <strong>Sumo</strong>, plus an Abilities ladder with Zenith Ability Weapons.</p></div>
+      <div class="card feature reveal"><h3><span>📈</span>Bronze → Zenith</h3><p>Six ranks with rank-up announcements. New players place fast with a higher K for their first 10 games.</p></div>
+      <div class="card feature reveal"><h3><span>🎯</span>Smart matchmaking</h3><p>Starts at ±100 Elo and widens while you wait, so matches are fair and queues stay short.</p></div>
+      <div class="card feature reveal"><h3><span>🔁</span>Self-resetting arenas</h3><p>Save a snapshot once and every block, lava pool and dropped item is restored after each round.</p></div>
+      <div class="card feature reveal"><h3><span>🛡️</span>Anti-boosting</h3><p>Playing the same opponent over and over stops earning Elo. No more win-trading.</p></div>
+      <div class="card feature reveal"><h3><span>🗓️</span>Seasons with rewards</h3><p>Run seasons on a timer or end them yourself. The top 3 of every ladder are archived and paid, then everyone soft-resets.</p></div>
+      <div class="card feature reveal"><h3><span>🏟️</span>Best of 1, 3 or 5</h3><p>Players pick per challenge. Frozen countdown, round scores, a time limit that only counts fighting time.</p></div>
+      <div class="card feature reveal"><h3><span>📋</span>Match recap</h3><p>Hits, damage dealt and taken, longest combo and fight time after every match, plus a live combo counter.</p></div>
+      <div class="card feature reveal"><h3><span>💰</span>Wagers &amp; payouts</h3><p>Coins for wins, an optional ranked entry fee and wagers on duel requests, winner takes both. Works with Zenith Economy.</p></div>
+      <div class="card feature reveal"><h3><span>🎒</span>Kit editor</h3><p>Arrange every ladder's kit once. Layouts adapt automatically when you change a kit.</p></div>
+      <div class="card feature reveal"><h3><span>👀</span>Watch &amp; duel</h3><p>Watch any match live, and get your items back when you leave. Challenge friends to unranked duels.</p></div>
+      <div class="card feature reveal"><h3><span>🛡️</span>Clans built in</h3><p>Clan tags show in nametags, and ranked wins earn points for your Zenith Clans clan.</p></div>
+      <div class="card feature reveal"><h3><span>📊</span>Live Elo boards</h3><p>Floating leaderboards per ladder, plus profiles with match history and past seasons.</p></div>
+      <div class="card feature reveal"><h3><span>🧭</span>Lobby hotbar</h3><p>Ranked, Unranked, Kit Editor, Stats and Leaderboards, one tap each. No commands to remember.</p></div>
+      <div class="card feature reveal"><h3><span>🎮</span>Admin panel</h3><p>Lobby, arenas, ladder kits, settings, live matches and seasons, all in-game.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="editions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Pricing</div>
+      <h2>Pick your edition</h2>
+      <p>One-time payment, by PayPal invoice in Discord.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="ed">
+        <thead>
+          <tr><th></th><th class="hl">Standard</th><th class="hl">Premium</th></tr>
+          <tr><td></td><td class="pr">$18</td><td class="pr">$28</td></tr>
+        </thead>
+        <tbody>
+          <tr><td>Every feature on this page</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Updates</td><td>3 months</td><td>12 months</td></tr>
+          <tr><td>Setup help (arenas + snapshots)</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>1 custom ladder made for you</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>Rebrand add-on: your server's name in-game <span class="muted">(license stays Zenith)</span></td><td>+$2</td><td>+$2</td></tr>
+          <tr><td></td><td><a class="btn btn-gold btn-sm" data-discord href="#">Buy Standard</a></td><td><a class="btn btn-gold btn-sm" data-discord href="#">Buy Premium</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Get all six as <a class="gold" href="index.html#bundle">Zenith Complete</a>: <strong>$65</strong> Standard · <strong>$99</strong> Premium.</p>
+  </div>
+</section>
+
+<section id="setup">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Setup</div>
+      <h2>Live in 5 minutes</h2>
+    </div>
+    <div class="grid g3 steps">
+      <div class="card step reveal"><h3>Install</h3><p>Open the <code>.mcaddon</code> and turn on <strong>Zenith Ranked Duels</strong>. No experiments.</p></div>
+      <div class="card step reveal"><h3>Lobby &amp; arenas</h3><p><code>/zenith_duels:admin</code>: set the lobby, create an arena, and set spawn A and B.</p></div>
+      <div class="card step reveal"><h3>Snapshot</h3><p>Mark the arena box and press <strong>Save snapshot</strong>. It resets after every round from now on.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="commands">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Commands</div>
+      <h2>Short list, all you need</h2>
+    </div>
+    <div class="cmds reveal">
+      <div class="cmd"><code>/zenith_duels:menu</code><span>Everything in one menu (or use the lobby hotbar)</span></div>
+      <div class="cmd"><code>/zenith_duels:ranked</code><span>Pick a ladder and queue</span></div>
+      <div class="cmd"><code>/zenith_duels:duel &lt;player&gt;</code><span>Challenge a friend (unranked)</span></div>
+      <div class="cmd"><code>/zenith_duels:watch</code><span>Pick a live match to watch</span></div>
+      <div class="cmd"><code>/zenith_duels:recap</code><span>Your last match recap</span></div>
+      <div class="cmd"><code>/zenith_duels:kit</code><span>Kit layout editor</span></div>
+      <div class="cmd"><code>/zenith_duels:stats [player]</code><span>Elo, W/L, rank and match history</span></div>
+      <div class="cmd"><code>/zenith_duels:forfeit</code><span>Give up the current match</span></div>
+      <div class="cmd"><code>/zenith_duels:admin</code><span>Admin panel</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band reveal">
+      <h2>Ready to <span class="grad">climb?</span></h2>
+      <p>Open a ticket in the Discord. You'll get a PayPal invoice, then your files.</p>
+      <a class="btn btn-gold" data-discord href="#">Buy Ranked Duels</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

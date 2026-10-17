@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog — Zenith Packs &amp; Addons</title>
+  <meta name="description" content="What's new in every Zenith pack for Minecraft Bedrock Edition.">
+  <meta property="og:title" content="Changelog — Zenith Packs &amp; Addons">
+  <meta property="og:description" content="What's new in every Zenith pack for Minecraft Bedrock Edition.">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/changelog.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/changelog.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="eyebrow">Changelog</div>
+  <h1>What's new</h1>
+  <p class="lead">Every update to every pack. Updates are free during your update period. Join the Discord to get notified.</p>
+</header>
+<section style="padding-top:10px"><div class="wrap"><div class="grid g2"><div class="card reveal changelog"><h3>🗡️ Zenith FFA</h3><div class="doc"><h3>1.2.0</h3>
+<ul>
+<li><strong>Killstreak rewards</strong>: coins, potion effects and items at the streaks you choose (3 / 5 / 10 / 25 built in), with a title and sound for the player and a server-wide shout-out. Edit them in <strong>Admin → Streaks &amp; bounties</strong>.</li>
+<li><strong>Kill effects</strong>: 8 effects (Lightning, Flames, Hearts, Gold Burst, Souls, Explosion, Frost, Classic) that play where your victim falls. Pick one in your profile or with <code>/zenith_ffa:effects</code>, with a private preview. Admins lock effects to a rank or hide them.</li>
+<li><strong>Bounty board</strong> (<code>/zenith_ffa:bounty</code>): every bounty on pages, place your own bounty, and a <strong>Top Bounties</strong> floating board. Bounties now stay until claimed instead of vanishing when the player logs out or dies to the environment.</li>
+<li><strong>Ranks &amp; nicknames</strong>: built-in and custom ranks in nametags and the kill feed, rank kits and claim kits by rank, <code>zenith_rank:&lt;id&gt;</code> tags (adding the tag yourself grants the rank), nicknames, and <code>/zenith_ffa:rank</code> and <code>/zenith_ffa:nick</code>.</li>
+<li><strong>Claim kits</strong> with cooldowns and claim limits (<code>/zenith_ffa:claim</code>).</li>
+<li><strong>NPCs</strong> for the menu, kits, claim kits, shop, daily reward, leaderboards, profile and bounty board.</li>
+<li><strong>World protection</strong>: anti-break and anti-place with an allow-list, build height limit, anti-dupe.</li>
+<li><strong>Moderation</strong>: warnings with auto-kick (<code>/zenith_ffa:warn</code>) and anti-AFK.</li>
+<li><strong>Zenith Economy wallet</strong>: one balance across the server when Economy is installed.</li>
+<li><strong>Shop categories</strong>, a <strong>Most Deaths</strong> leaderboard, and a profile screen that works for offline players too.</li>
+<li><strong>Plays nicely with Zenith Duels and Events</strong>: players in a duel or event are ignored by FFA&#39;s stats, streaks, bounties, spawn, kit, safe zone, AFK check and protection.</li>
+<li>Settings split into pages (Combat &amp; kits, Coins &amp; daily, Display) with more options: streak bonus, daily per-day and streak length, show ranks.</li>
+<li>Polish: success and error sounds on every action, titles for rewards and claims, confirm before buying or placing a bounty, Back buttons that return where you came from.</li>
+<li>Fixes: editing the shop without Ability Weapons installed no longer deletes its weapons from the shop; buying with a full inventory no longer loses the item; claim kits check for free slots first; the safe zone now cancels hits (including arrows) instead of healing them back; AFK players sent to spawn are no longer welcomed back instantly; nicknames can&#39;t copy another player&#39;s name; tapping an NPC twice quickly no longer opens two menus; build limit checks the exact block being placed; faster nametags and leaderboards on busy servers.</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li><strong>Arena resets</strong>: corner-to-corner fills with block choice, replace-only filter, blocks-per-fill and tick-delay control, auto timer, warnings, evacuation.</li>
+<li>A support line in the admin panel.</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release.</li>
+</ul>
+</div><a class="btn btn-ghost btn-sm" href="guide-ffa.html">Guide</a></div>
+<div class="card reveal changelog"><h3>⚔️ Zenith Ranked Duels</h3><div class="doc"><h3>1.2.0</h3>
+<ul>
+<li><strong>Rank-up celebrations</strong> with title, sound and sparkles. Tier names and &quot;to next tier&quot; in every menu.</li>
+<li><strong>Seasons</strong>: season timer, adjustable soft reset, season rewards with Zenith Economy, season countdown on the profile.</li>
+<li><strong>Match recap</strong> (hits, damage, longest combo, fight time) after every match, in the rematch screen and with <code>/zenith_duels:recap</code>.</li>
+<li><strong>Best of 3 / 5 per challenge</strong>: duel requests pick their own format, and can carry a <strong>wager</strong>.</li>
+<li><strong>Rewards</strong>: coins for wins, optional ranked entry fee, clan points with Zenith Clans.</li>
+<li><strong>Watch a match</strong> from a live list; watchers go back where they were with their items.</li>
+<li>Clan tags in nametags. Countdown, round and Boxing hit sounds. Combo counter on the HUD.</li>
+<li>Admin panel: settings in groups, Rewards page, watch or end any live match.</li>
+<li>Fixes: the time limit no longer counts breaks between rounds; watching a match no longer wipes your inventory; players can&#39;t force a draw on someone else&#39;s match with <code>/forfeit</code> while watching; a player leaving between rounds can&#39;t restart the match; your duel kit is no longer kept after a match when the lobby hotbar is off; Duels leaves players in Zenith Events alone and treats Events like FFA on shared worlds; Duels no longer overwrites other packs&#39; nametags outside its lobby.</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li><strong>Rematch</strong> prompt after every match.</li>
+<li>A support line in the admin panel.</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release.</li>
+</ul>
+</div><a class="btn btn-ghost btn-sm" href="guide-duels.html">Guide</a></div>
+<div class="card reveal changelog"><h3>💰 Zenith Economy</h3><div class="doc"><h3>1.2.0</h3>
+<ul>
+<li><strong>Auction house</strong>: list, browse, search &amp; sort, buy, cancel, expiry with a claim box, sales tax and listing limits.</li>
+<li><strong>Jobs</strong>: pay for mining ores and chopping logs, with an in-game rate editor. Player-placed blocks don&#39;t pay.</li>
+<li><strong>Mob rewards editor</strong>, and bounty minimum and fee in Settings.</li>
+<li><strong>Daily login streak</strong> now works by calendar day (pick when the day starts), counts beyond day 7, shows your best streak, pays a streak bonus and reminds you on join.</li>
+<li><strong>Transaction history</strong> screen (last 20), player lookup for admins (offline too), and an <strong>audit log</strong>.</li>
+<li>Confirm step for big payments and shop buys; every purchase shows the total and balance after. <strong>Sell all of this type</strong> and <code>/zenith_eco:sellall</code> with a breakdown.</li>
+<li>New script events: <code>give_silent</code>, <code>take_silent</code> and <code>set</code>.</li>
+<li>Settings split into sections; new options for confirmations, kill cooldown, daily streak and auction house.</li>
+<li>Fixes: a bounty is no longer lost when the killer&#39;s balance is full; player kill rewards can&#39;t be farmed with alt accounts (per-victim cooldown); no kill rewards for players busy in a duel or event; selling with a full balance no longer deletes the items; negative amounts show as <code>-$5</code>; editing the shop no longer drops hidden Ability Weapons items; faster selling and saving on busy servers.</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li><strong>Player bounties</strong> (place, stack, claim on kill, top list).</li>
+<li>A support line in the admin panel.</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release.</li>
+</ul>
+</div><a class="btn btn-ghost btn-sm" href="guide-eco.html">Guide</a></div>
+<div class="card reveal changelog"><h3>✨ Zenith Ability Weapons</h3><div class="doc"><p><em>No entries yet.</em></p>
+</div><a class="btn btn-ghost btn-sm" href="guide-aw.html">Guide</a></div>
+<div class="card reveal changelog"><h3>🏆 Zenith Events</h3><div class="doc"><h3>1.2.0</h3>
+<ul>
+<li><strong>Two new events:</strong> Sumo Brawl (free-for-all sumo) and One in the Chamber.</li>
+<li><strong>Player vote:</strong> pick the next event from 3 options in a pop-up screen or with <code>/zenith_events:vote</code>. Hosts can start a vote from the host panel.</li>
+<li><strong>Auto events upgrade:</strong> clock times with a time zone, rotation in order, and heads-up announcements 5 min / 1 min / 10 s before.</li>
+<li><strong>Reward preview</strong> in the join menu and join screen, and prizes shown in signups and results.</li>
+<li><strong>Entry fees</strong> with refunds when an event is cancelled, optionally added to the winner&#39;s prize.</li>
+<li><strong>Spectate</strong> (<code>/zenith_events:spectate</code>) for players who are out or waiting for their fight.</li>
+<li><strong>Records</strong> (<code>/zenith_events:records</code>): fastest race, longest hill hold, most kills, most knock-offs, most wins per event type.</li>
+<li>Countdown, round, FINAL, VICTORY and podium titles with sounds. Kill counts in Last Man Standing.</li>
+<li>Works with Zenith Duels: event players are marked busy, and players in a duel can&#39;t join until it&#39;s over.</li>
+<li>Money and clan point rewards only apply (and only show up) when Zenith Economy / Zenith Clans are installed.</li>
+<li>Fixes: players who left a tournament could be pulled into a later fight; leavers could get podium rewards; &quot;Clear saved reward items&quot; didn&#39;t work; the Refresh button in Live status closed the screen; fighters could break the arena; players coming back after a disconnect stayed in the arena instead of being restored.</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li><strong>Spleef</strong> event (works with auto events and the arena snapshot).</li>
+<li>A support line in the host panel.</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release: 5 event types, auto events, rewards, champions board.</li>
+</ul>
+</div><a class="btn btn-ghost btn-sm" href="guide-events.html">Guide</a></div>
+<div class="card reveal changelog"><h3>🛡️ Zenith Clans</h3><div class="doc"><h3>1.0.0</h3>
+<ul>
+<li>First release: clans with roles, invites, chat, home and bank; clan levels with perks; clan wars; allies; weekly quests; leaderboards and floating boards.</li>
+</ul>
+</div><a class="btn btn-ghost btn-sm" href="guide-clans.html">Guide</a></div></div></div></section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

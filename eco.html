@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith Economy — Bedrock Server Economy</title>
+  <meta name="description" content="Zenith Economy: balances, /pay, in-game shop editor, sell all, daily rewards and command-block hooks for Minecraft Bedrock Edition Realms and servers. No experiments needed.">
+  <meta property="og:title" content="Zenith Economy — Bedrock Server Economy">
+  <meta property="og:description" content="Money, shop, selling, daily rewards, scoreboard + scriptevent hooks. Realm-safe.">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og-eco.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/eco.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/eco.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+<nav class="subnav" aria-label="Zenith Economy sections">
+  <div class="wrap">
+    <b>Zenith Economy</b>
+    <a href="#features">Features</a><a href="#editions">Pricing</a><a href="#setup">Setup</a><a href="#commands">Commands</a><a href="guide-eco.html">Full guide</a>
+    <a class="btn btn-gold btn-sm" data-discord href="#editions">Buy for $12</a>
+  </div>
+</nav>
+
+<header class="wrap p-hero">
+  <div>
+    <div class="eyebrow">Zenith Economy · v1.2</div>
+    <h1 style="margin-top:14px">An economy<br><span class="grad">that runs itself.</span></h1>
+    <p class="lead">Money, a shop you edit in-game, an auction house, jobs, daily streaks, bounties and hooks for your command blocks. One wallet for every Zenith addon. Set it up in one minute on any Realm or server.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" data-discord href="#editions">Buy for $12</a>
+      <a class="btn btn-ghost" href="#features">See features</a>
+    </div>
+    <div class="meta">
+      <span class="badge">No experiments</span>
+      <span class="badge">Realms ✓</span>
+      <span class="badge">No resource pack</span>
+      <span class="badge">1.26.50+</span>
+    </div>
+  </div>
+  <div class="screen" aria-label="In-game preview: rich list, payments and earn popup">
+    <img class="scene" src="assets/art/eco.svg" alt="" width="640" height="480">
+    <div class="sidebar">
+      <b>RICHEST PLAYERS</b>
+      <div><span class="c-white">#1 Astra</span><span class="c-yel">$48,210</span></div>
+      <div><span class="c-white">#2 Nova</span><span class="c-yel">$31,900</span></div>
+      <div><span class="c-white">#3 Kairo</span><span class="c-yel">$12,450</span></div>
+    </div>
+    <div class="chat">
+      <div><span class="c-dark">[</span><span class="c-gold">Economy</span><span class="c-dark">]</span> <span style="color:var(--green)">Sold 412 items for $1,240.</span></div>
+      <div><span class="c-dark">[</span><span class="c-gold">Economy</span><span class="c-dark">]</span> <span style="color:var(--green)">+$500</span> <span class="c-gray">from</span> <span class="c-yel">Nova</span></div>
+      <div><span class="c-dark">[</span><span class="c-gold">Economy</span><span class="c-dark">]</span> <span style="color:var(--green)">Claimed $110</span> <span class="c-gray">(day</span> <span class="c-yel">7</span> <span class="c-gray">streak)</span></div>
+    </div>
+    <div class="bar"><span style="color:var(--green)">+$50</span> <span class="c-dark">·</span> <span class="c-gray">Parkour reward</span> <span class="c-dark">·</span> <span class="c-yel">$48,260</span></div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Features</div>
+      <h2>Everything money needs</h2>
+      <p>Built so admins never touch a config file, and players always know where their money went.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card feature reveal"><h3><span>💵</span>Dupe-proof money</h3><p>Balances are stored as data, not items, so they can't be duped, dropped or lost. Offline players keep theirs.</p></div>
+      <div class="card feature reveal"><h3><span>🛒</span>In-game shop editor</h3><p>Hold an item and press "Add item in my hand". Set buy and sell prices, and add categories. Done.</p></div>
+      <div class="card feature reveal"><h3><span>♻️</span>Sell hand / sell all</h3><p>Turn loot into money in one tap. Renamed and enchanted items are skipped, so nothing valuable goes by accident.</p></div>
+      <div class="card feature reveal"><h3><span>🤝</span>/pay with tax</h3><p>Player payments with an optional tax as a money sink. Both sides get a logged receipt.</p></div>
+      <div class="card feature reveal"><h3><span>📅</span>Daily streak</h3><p>Rewards grow every day in a row, with a streak bonus, a best-streak record and a reminder on join.</p></div>
+      <div class="card feature reveal"><h3><span>🔨</span>Auction house</h3><p>List the item you hold with a price and duration. Search, sort, buy, and get unsold items back, even offline.</p></div>
+      <div class="card feature reveal"><h3><span>⛏️</span>Jobs</h3><p>Get paid for mining ores and chopping logs. Placed blocks don't pay, so it can't be farmed. Rates set in-game.</p></div>
+      <div class="card feature reveal"><h3><span>🎯</span>Bounties</h3><p>Put money on a player's head. Whoever takes them out collects it. Minimum and fee are yours to set.</p></div>
+      <div class="card feature reveal"><h3><span>🧾</span>History &amp; audit log</h3><p>Players see their last 20 transactions. Admins get a full audit log and can look up any player, even offline.</p></div>
+      <div class="card feature reveal"><h3><span>🗡️</span>Kill rewards</h3><p>Money for mobs (zombie to ender dragon, all editable) and for player kills, with anti-farm-spam.</p></div>
+      <div class="card feature reveal"><h3><span>🔌</span>Command-block hooks</h3><p><code>/scriptevent zenith_eco:give 50</code> from any button, NPC or parkour finish. <code>take</code> works too.</p></div>
+      <div class="card feature reveal"><h3><span>📊</span>Scoreboard mirror</h3><p>Balances are copied to a scoreboard objective, so your other addons and commands can read them.</p></div>
+      <div class="card feature reveal"><h3><span>🏆</span>Live rich list</h3><p>Floating top-10 boards plus a richest-players screen. Wallets show balance, rank and history.</p></div>
+      <div class="card feature reveal"><h3><span>🎨</span>Your currency</h3><p>Name it and pick a symbol: $, Gems, Coins, Shards. Set the starting balance and the max.</p></div>
+      <div class="card feature reveal"><h3><span>🛡️</span>Exploit guards</h3><p>The editor won't let a sell price reach the buy price, and sells re-check every slot at the moment of sale.</p></div>
+      <div class="card feature reveal"><h3><span>🎮</span>Admin panel</h3><p>Shop editor, give/take/set money, settings, boards and a full reset, all in-game.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="editions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Pricing</div>
+      <h2>Pick your edition</h2>
+      <p>One-time payment, by PayPal invoice in Discord.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="ed">
+        <thead>
+          <tr><th></th><th class="hl">Standard</th><th class="hl">Premium</th></tr>
+          <tr><td></td><td class="pr">$12</td><td class="pr">$20</td></tr>
+        </thead>
+        <tbody>
+          <tr><td>Every feature on this page</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Updates</td><td>3 months</td><td>12 months</td></tr>
+          <tr><td>Shop set up for your server (prices + items)</td><td class="no">—</td><td class="yes">✓</td></tr>
+                    <tr><td>Rebrand add-on: your server's name in-game <span class="muted">(license stays Zenith)</span></td><td>+$2</td><td>+$2</td></tr>
+          <tr><td></td><td><a class="btn btn-gold btn-sm" data-discord href="#">Buy Standard</a></td><td><a class="btn btn-gold btn-sm" data-discord href="#">Buy Premium</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Get all six as <a class="gold" href="index.html#bundle">Zenith Complete</a>: <strong>$65</strong> Standard · <strong>$99</strong> Premium.</p>
+  </div>
+</section>
+
+<section id="setup">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Setup</div>
+      <h2>Live in 1 minute</h2>
+    </div>
+    <div class="grid g3 steps">
+      <div class="card step reveal"><h3>Install</h3><p>Open the <code>.mcaddon</code> and turn on <strong>Zenith Economy</strong>. No experiments.</p></div>
+      <div class="card step reveal"><h3>Name your money</h3><p><code>/zenith_eco:admin</code> → Settings: set the currency name, symbol and starting balance.</p></div>
+      <div class="card step reveal"><h3>Stock the shop</h3><p>The default shop works out of the box. Add your own items by holding them in the shop editor.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="commands">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Commands</div>
+      <h2>Short list, all you need</h2>
+    </div>
+    <div class="cmds reveal">
+      <div class="cmd"><code>/zenith_eco:menu</code><span>Everything in one menu</span></div>
+      <div class="cmd"><code>/zenith_eco:pay &lt;player&gt; &lt;amount&gt;</code><span>Pay a player</span></div>
+      <div class="cmd"><code>/zenith_eco:shop</code><span>Buy from the shop</span></div>
+      <div class="cmd"><code>/zenith_eco:sell</code><span>Sell hand or sell all</span></div>
+      <div class="cmd"><code>/zenith_eco:daily</code><span>Daily reward with streak</span></div>
+      <div class="cmd"><code>/zenith_eco:balance [player]</code><span>Wallet and history</span></div>
+      <div class="cmd"><code>/zenith_eco:baltop</code><span>Richest players</span></div>
+      <div class="cmd"><code>/zenith_eco:ah</code><span>Browse the auction house</span></div>
+      <div class="cmd"><code>/zenith_eco:auctionsell</code><span>List the item you're holding</span></div>
+      <div class="cmd"><code>/zenith_eco:jobs</code><span>Job rates and your earnings</span></div>
+      <div class="cmd"><code>/zenith_eco:history</code><span>Your last 20 transactions</span></div>
+      <div class="cmd"><code>/zenith_eco:sellall</code><span>Sell everything sellable in your inventory</span></div>
+      <div class="cmd"><code>/scriptevent zenith_eco:give 50</code><span>Reward from command blocks (also <code>take</code>)</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band reveal">
+      <h2>Ready to <span class="grad">get paid?</span></h2>
+      <p>Open a ticket in the Discord. You'll get a PayPal invoice, then your files.</p>
+      <a class="btn btn-gold" data-discord href="#">Buy Zenith Economy</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Install — Zenith Packs &amp; Addons</title>
+  <meta name="description" content="How to install Zenith packs on Minecraft Bedrock single-player worlds, Realms and dedicated servers, plus troubleshooting.">
+  <meta property="og:title" content="How to Install — Zenith Packs &amp; Addons">
+  <meta property="og:description" content="How to install Zenith packs on Minecraft Bedrock single-player worlds, Realms and dedicated servers, plus troubleshooting.">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/install.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/install.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="eyebrow">How to install</div>
+  <h1>From download to <span class="grad">playing</span></h1>
+  <p class="lead">No experiments to turn on and no dedicated server needed. Pick your setup below. Stuck? Open a ticket and our team helps you set it up once, for free.</p>
+</header>
+<section class="doc-wrap">
+  <div class="wrap doc-grid">
+    <article class="doc">
+      <h2>Single-player / LAN world</h2>
+      <ol>
+        <li>Double-click the <code>.mcaddon</code> file. Minecraft opens and imports it. (Or: Settings → Storage → Import.)</li>
+        <li>Open your world → <strong>Edit</strong> → <strong>Behavior Packs</strong> → <strong>Available</strong> → activate the Zenith pack.</li>
+        <li>Ability Weapons also has a <strong>Resource Pack</strong>. Activate it under Resource Packs (Minecraft usually does this for you).</li>
+        <li>Play, then follow the pack's guide. Setup always starts with <code>/&lt;pack&gt;:setadmin @s true</code>.</li>
+      </ol>
+      <h2>Realm</h2>
+      <ol>
+        <li>Import the <code>.mcaddon</code> on your device as above.</li>
+        <li>Make or open a world on your device, activate the pack(s), and do the setup (spawns, arenas and so on).</li>
+        <li>Realm settings → <strong>Replace world</strong> → pick that world. The packs upload with it.</li>
+        <li>Members download the packs automatically when they join.</li>
+      </ol>
+      <h2>Dedicated / hosted server (BDS)</h2>
+      <ol>
+        <li>Rename the <code>.mcaddon</code> to <code>.zip</code> and extract it. You get a <code>…_BP</code> folder (and a <code>…_RP</code> for Ability Weapons).</li>
+        <li>Upload <code>…_BP</code> to <code>behavior_packs/</code> and <code>…_RP</code> to <code>resource_packs/</code> on your server.</li>
+        <li>Add them to your world's <code>world_behavior_packs.json</code> / <code>world_resource_packs.json</code> (uuid + version from each <code>manifest.json</code>). Many hosts have an "addons" button that does this for you.</li>
+        <li>Restart the server.</li>
+      </ol>
+      <h2>Requirements</h2>
+      <ul>
+        <li>Minecraft Bedrock Edition <strong>1.26.50 or newer</strong>.</li>
+        <li>No experiments needed. Cheats only need to be on for operator commands like <code>setadmin</code>.</li>
+        <li>Works together: install any combination of Zenith packs, and they detect each other.</li>
+      </ul>
+      <h2>Troubleshooting</h2>
+      <h3>"Unknown command"</h3>
+      <p>The pack isn't active on this world, or the world needs reopening after adding it. Commands always include the pack prefix, e.g. <code>/zenith_ffa:menu</code>.</p>
+      <h3>Floating leaderboards don't appear</h3>
+      <p>Reopen the world once after adding the pack, then place them again from the admin panel.</p>
+      <h3>"No permission" in the admin panel</h3>
+      <p>An operator has to run <code>/&lt;pack&gt;:setadmin &lt;you&gt; true</code> first.</p>
+      <h3>Something else</h3>
+      <p>Turn on Settings → Creator → <strong>Content Log GUI</strong>, reproduce the problem, then send a screenshot of the red line in a Discord ticket. Fixes are free during your update period.</p>
+    </article>
+    <aside class="doc-side">
+      <div class="card"><div class="eyebrow">Need help?</div><p class="muted">Open a ticket and we'll get you running.</p><a class="btn btn-gold" style="width:100%;justify-content:center" data-discord href="https://discord.gg/XKXP7hn5Hr">Discord support</a></div>
+      <div class="card" style="margin-top:14px"><div class="eyebrow">Guides</div><div class="side-links"><a href="guide-ffa.html">🗡️ Zenith FFA</a><a href="guide-duels.html">⚔️ Zenith Ranked Duels</a><a href="guide-eco.html">💰 Zenith Economy</a><a href="guide-aw.html">✨ Zenith Ability Weapons</a><a href="guide-events.html">🏆 Zenith Events</a><a href="guide-clans.html">🛡️ Zenith Clans</a></div></div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

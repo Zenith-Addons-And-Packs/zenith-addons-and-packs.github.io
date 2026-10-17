@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith Events — Bedrock Tournaments &amp; Events</title>
+  <meta name="description" content="Zenith Events: tournaments, sumo, last man standing, king of the hill and races for Minecraft Bedrock Edition. Auto events, rewards, champions board. No experiments needed.">
+  <meta property="og:title" content="Zenith Events — Bedrock Tournaments &amp; Events">
+  <meta property="og:description" content="Tournaments, Sumo, LMS, KOTH, Races. Auto events and rewards. Realm-safe.">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og-events.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/events.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/events.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+<nav class="subnav" aria-label="Zenith Events sections">
+  <div class="wrap">
+    <b>Zenith Events</b>
+    <a href="#features">Features</a><a href="#editions">Pricing</a><a href="#setup">Setup</a><a href="#commands">Commands</a><a href="guide-events.html">Full guide</a>
+    <a class="btn btn-gold btn-sm" data-discord href="#editions">Buy for $15</a>
+  </div>
+</nav>
+
+<header class="wrap p-hero">
+  <div>
+    <div class="eyebrow">Zenith Events · v1.2</div>
+    <h1 style="margin-top:14px">Your server,<br><span class="grad">always live.</span></h1>
+    <p class="lead">Tournaments, Sumo, Sumo Brawl, Last Man Standing, King of the Hill, One in the Chamber, Races and Spleef. Host from a menu, or let the scheduler run them with player votes. Winners get money, clan points and loot.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" data-discord href="#editions">Buy for $15</a>
+      <a class="btn btn-ghost" href="#features">See features</a>
+    </div>
+    <div class="meta"><span class="badge">No experiments</span><span class="badge">Realms ✓</span><span class="badge">No resource pack</span><span class="badge">1.26.50+</span></div>
+  </div>
+  <div class="screen" aria-label="In-game preview: event announcement and bracket">
+    <img class="scene" src="assets/art/events.svg" alt="" width="640" height="480">
+    <div class="sidebar"><b>TOURNAMENT</b><div><span class="c-gray">Round</span><span class="c-white">3</span></div><div><span class="c-gray">Now</span><span class="c-gold">Astra v Nova</span></div><div><span class="c-gray">Left</span><span class="c-white">4</span></div></div>
+    <div class="chat">
+      <div><span class="c-dark">[</span><span class="c-gold">Event</span><span class="c-dark">]</span> <span class="c-gold"><b>Tournament</b></span> <span class="c-gray">starts in</span> <span class="c-yel">10s</span> <span class="c-dark">(14 joined)</span></div>
+      <div><span class="c-dark">[</span><span class="c-gold">Event</span><span class="c-dark">]</span> <span class="c-red">Kairo</span> <span class="c-gray">is out (lost to Astra).</span> <span class="c-yel">4</span> <span class="c-gray">left.</span></div>
+      <div><span class="c-dark">[</span><span class="c-gold">Event</span><span class="c-dark">]</span> <span class="c-gold"><b>Results</b></span> <span class="c-gold">1st Astra</span> <span class="c-dark">·</span> <span class="c-white">2nd Nova</span> <span class="c-dark">·</span> <span class="c-red">3rd Blaze</span></div>
+    </div>
+    <div class="bar"><span class="c-gray">vs</span> <span class="c-white">Nova</span> <span class="c-dark">|</span> <span class="c-gray">74s</span></div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="eyebrow">Features</div><h2>Eight modes, zero effort</h2><p>Everything runs itself: signups, brackets, countdowns, results and rewards.</p></div>
+    <div class="grid g3">
+      <div class="card feature reveal"><h3><span>⚔️</span>Tournament</h3><p>1v1 single elimination with byes, fight timers and a live bracket for spectators.</p></div>
+      <div class="card feature reveal"><h3><span>🟢</span>Sumo Tournament</h3><p>The same bracket, no damage. Knock them off the platform.</p></div>
+      <div class="card feature reveal"><h3><span>💀</span>Last Man Standing</h3><p>Everyone at once, one life each. Last one alive wins.</p></div>
+      <div class="card feature reveal"><h3><span>👑</span>King of the Hill</h3><p>Hold the hill alone to score. Contested doesn't count. First to 60s.</p></div>
+      <div class="card feature reveal"><h3><span>❄️</span>Spleef</h3><p>Instant-break shovels, no damage. Dig the floor out from under everyone. The arena rebuilds itself after.</p></div>
+      <div class="card feature reveal"><h3><span>🏁</span>Race</h3><p>Parkour or obstacle race. No PvP, fall and restart, top 3 rewarded.</p></div>
+      <div class="card feature reveal"><h3><span>🌀</span>Sumo Brawl</h3><p>Free-for-all sumo on one platform. Last one standing on the stage wins.</p></div>
+      <div class="card feature reveal"><h3><span>🏹</span>One in the Chamber</h3><p>One arrow that kills, a few lives each. Get a kill to get your arrow back.</p></div>
+      <div class="card feature reveal"><h3><span>⏰</span>Scheduler</h3><p>Every N minutes or at set times of day, in rotation or random, with warnings at 5 min, 1 min and 10 s.</p></div>
+      <div class="card feature reveal"><h3><span>🗳️</span>Player votes</h3><p>Before each auto event, players pick the mode from three options in a pop-up.</p></div>
+      <div class="card feature reveal"><h3><span>🎁</span>Real rewards</h3><p>Money (Zenith Economy), clan points (Zenith Clans) and loot for 1st, 2nd and 3rd, shown before players join.</p></div>
+      <div class="card feature reveal"><h3><span>🎟️</span>Entry fees</h3><p>Optional fee to join, refunded if the event is cancelled. Add the pot to the winner's prize.</p></div>
+      <div class="card feature reveal"><h3><span>📢</span>Hype built in</h3><p>Title announcements, countdowns, a podium broadcast and a gold burst for the winner.</p></div>
+      <div class="card feature reveal"><h3><span>🏆</span>Champions &amp; records</h3><p>Wins, podiums and all-time records per mode, a top-10 screen and a floating leaderboard.</p></div>
+      <div class="card feature reveal"><h3><span>👀</span>Spectate</h3><p>Players who are out can watch the rest of the event from a spectate menu.</p></div>
+      <div class="card feature reveal"><h3><span>🔁</span>Auto-reset arena</h3><p>Save a snapshot once and the fight arena is restored between fights.</p></div>
+      <div class="card feature reveal"><h3><span>🛡️</span>Survival-safe</h3><p>Joining asks before clearing the inventory. Everyone gets their spot and game mode back.</p></div>
+      <div class="card feature reveal"><h3><span>🔌</span>Disconnect-proof</h3><p>Leavers are eliminated and restored when they rejoin. Survives /reload.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="editions">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="eyebrow">Pricing</div><h2>Pick your edition</h2><p>One-time payment, by PayPal invoice in Discord.</p></div>
+    <div class="table-wrap reveal">
+      <table class="ed">
+        <thead><tr><th></th><th class="hl">Standard</th><th class="hl">Premium</th></tr><tr><td></td><td class="pr">$15</td><td class="pr">$25</td></tr></thead>
+        <tbody>
+          <tr><td>Every feature on this page</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Updates</td><td>3 months</td><td>12 months</td></tr>
+          <tr><td>We set up your event arenas</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>Rebrand add-on: your server's name in-game <span class="muted">(license stays Zenith)</span></td><td>+$2</td><td>+$2</td></tr>
+          <tr><td></td><td><a class="btn btn-gold btn-sm" data-discord href="#">Buy Standard</a></td><td><a class="btn btn-gold btn-sm" data-discord href="#">Buy Premium</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Get all six as <a class="gold" href="index.html#bundle">Zenith Complete</a>: <strong>$65</strong> Standard · <strong>$99</strong> Premium.</p>
+  </div>
+</section>
+
+<section id="setup">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="eyebrow">Setup</div><h2>Live in 5 minutes</h2></div>
+    <div class="grid g3 steps">
+      <div class="card step reveal"><h3>Install</h3><p>Open the <code>.mcaddon</code> and turn on <strong>Zenith Events</strong>. No experiments.</p></div>
+      <div class="card step reveal"><h3>Set spots</h3><p><code>/zenith_events:host</code> → Setup: lobby, fight spawns, FFA spawns, hill, race start and finish.</p></div>
+      <div class="card step reveal"><h3>Go live</h3><p>Press Start, or turn on the scheduler and let the server run them with player votes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="commands">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="eyebrow">Commands</div><h2>Short list, all you need</h2></div>
+    <div class="cmds reveal">
+      <div class="cmd"><code>/zenith_events:join</code><span>Join the current event</span></div>
+      <div class="cmd"><code>/zenith_events:menu</code><span>Status, bracket, event types, champions</span></div>
+      <div class="cmd"><code>/zenith_events:host</code><span>Host panel</span></div>
+      <div class="cmd"><code>/zenith_events:vote</code><span>Vote for the next event</span></div>
+      <div class="cmd"><code>/zenith_events:spectate</code><span>Watch the current event</span></div>
+      <div class="cmd"><code>/zenith_events:records</code><span>All-time records per mode</span></div>
+      <div class="cmd"><code>/zenith_events:start &lt;type&gt;</code><span>For command blocks: tournament, sumo, brawl, lms, koth, oitc, race, spleef</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band reveal"><h2>Ready to <span class="grad">host?</span></h2><p>Open a ticket in the Discord. You'll get a PayPal invoice, then your files.</p><a class="btn btn-gold" data-discord href="#">Buy Zenith Events</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenith FFA — Bedrock FFA Core</title>
+  <meta name="description" content="Zenith FFA: an open-world FFA core for Minecraft Bedrock Edition Realms and servers. Kit layouts, coins, bounties, shop, safe spawn and live leaderboards. No experiments needed.">
+  <meta property="og:title" content="Zenith FFA — Bedrock FFA Core">
+  <meta property="og:description" content="Kit layouts, coins, bounties, shop, safe spawn, live leaderboards. Set up in 2 minutes. Realm-safe.">
+  <meta property="og:image" content="https://zenith-addons-and-packs.github.io/assets/og-ffa.png">
+  <meta property="og:url" content="https://zenith-addons-and-packs.github.io/ffa.html">
+  <link rel="canonical" href="https://zenith-addons-and-packs.github.io/ffa.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links">
+      <div class="has-menu"><a href="index.html#products">Products</a>
+        <div class="menu"><a href="ffa.html"><img src="assets/art/thumb-ffa.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith FFA</b><small>Open-world FFA core</small></span></a><a href="duels.html"><img src="assets/art/thumb-duels.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ranked Duels</b><small>Ranked 1v1 with Elo</small></span></a><a href="eco.html"><img src="assets/art/thumb-eco.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Economy</b><small>Money, shop and bounties</small></span></a><a href="aw.html"><img src="assets/art/thumb-aw.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Ability Weapons</b><small>7 weapons, 7 powers</small></span></a><a href="events.html"><img src="assets/art/thumb-events.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Events</b><small>Tournaments on autopilot</small></span></a><a href="clans.html"><img src="assets/art/thumb-clans.png" alt="" loading="lazy" width="320" height="240"><span><b>Zenith Clans</b><small>Crews, wars and allies</small></span></a><a class="all" href="index.html#bundle"><b>Zenith Complete: all six</b><span>$65 →</span></a></div>
+      </div>
+      <a href="guides.html">Guides</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="work.html">Our work</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Support</a>
+    </div>
+    <a class="btn btn-gold btn-sm nav-cta" data-discord href="https://discord.gg/XKXP7hn5Hr">Join Discord</a>
+  </div>
+</nav>
+<nav class="subnav" aria-label="Zenith FFA sections">
+  <div class="wrap">
+    <b>Zenith FFA</b>
+    <a href="#features">Features</a><a href="#editions">Pricing</a><a href="#setup">Setup</a><a href="#commands">Commands</a><a href="guide-ffa.html">Full guide</a>
+    <a class="btn btn-gold btn-sm" data-discord href="#editions">Buy for $12</a>
+  </div>
+</nav>
+
+<header class="wrap p-hero">
+  <div>
+    <div class="eyebrow">Zenith FFA · v1.2</div>
+    <h1 style="margin-top:14px">Free-for-all,<br><span class="grad">done right.</span></h1>
+    <p class="lead">A complete FFA core for your Bedrock Realm or server. Kits with saved layouts, ranks and nicknames, killstreak rewards, kill effects, bounties, a shop, NPCs, world protection and anti-dupe. Set it up in-game in two minutes, with no experiments.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" data-discord href="#editions">Buy for $12</a>
+      <a class="btn btn-ghost" href="#features">See features</a>
+    </div>
+    <div class="meta">
+      <span class="badge">No experiments</span>
+      <span class="badge">Realms ✓</span>
+      <span class="badge">No resource pack</span>
+      <span class="badge">1.26.50+</span>
+    </div>
+  </div>
+  <div class="screen" aria-label="In-game preview: info sidebar, kill feed, bounty and HUD">
+    <img class="scene" src="assets/art/ffa.svg" alt="" width="640" height="480">
+    <div class="sidebar">
+      <b>ZENITH FFA</b>
+      <div><span class="c-gray">Online</span><span class="c-white">24</span></div>
+      <div><span class="c-gray">Top killer</span><span class="c-gold">Astra</span></div>
+      <div><span class="c-gray">Hot streak</span><span>Nova 7</span></div>
+      <div><span class="c-gray">Bounty</span><span class="c-yel">Nova 25</span></div>
+    </div>
+    <div class="chat">
+      <div><span class="c-red">Blaze</span> <span class="c-gray">was slain by</span> <span class="c-yel">Nova</span> <span class="c-dark">(</span><span class="c-red">7.5❤</span><span class="c-dark">)</span></div>
+      <div><span class="c-red"><b>BOUNTY</b></span> <span class="c-gray">on</span> <span class="c-yel">Nova</span><span class="c-gray">:</span> <span class="c-gold">25 coins</span><span class="c-gray">. Go get them.</span></div>
+      <div><span class="c-red">Nova</span> <span class="c-gray">was slain by</span> <span class="c-yel">Astra</span> <span class="c-dark">(</span><span class="c-red">4.0❤</span><span class="c-dark">)</span> <span class="c-gold"><b>REVENGE</b></span></div>
+      <div><span class="c-gold">Astra</span> <span class="c-gray">claimed</span> <span class="c-yel">Nova</span><span class="c-gray">'s</span> <span class="c-yel">25 coin</span> <span class="c-gray">bounty!</span></div>
+    </div>
+    <div class="bar"><span class="c-yel">340 coins</span> <span class="c-dark">|</span> <span class="c-gold">Streak</span> <span class="c-white">4</span> <span class="c-dark">|</span> <span class="c-gold">K/D</span> <span class="c-white">3.20</span> <span class="c-dark">|</span> <span class="c-red">⚔ 8s</span></div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Features</div>
+      <h2>Everything an FFA server needs</h2>
+      <p>Built for open-world FFA. Players keep playing and the system runs around them.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card feature reveal"><h3><span>🎒</span>Kits with your layout</h3><p>Players arrange their kit once and save it. If you change the kit later, layouts repair themselves.</p></div>
+      <div class="card feature reveal"><h3><span>🎁</span>Rank &amp; claim kits</h3><p>Lock kits to a rank, and hand out claim kits like a VIP pack with a cooldown and a claim limit.</p></div>
+      <div class="card feature reveal"><h3><span>👑</span>Ranks &amp; nicknames</h3><p>Owner, Admin, VIP, MVP and your own ranks with colours, shown above heads and in the kill feed.</p></div>
+      <div class="card feature reveal"><h3><span>🔥</span>Killstreak rewards</h3><p>Coins, effects or items at 3, 5, 10 and 25 kills, with a title and a server-wide shout-out. You set the steps.</p></div>
+      <div class="card feature reveal"><h3><span>⚡</span>Kill effects</h3><p>Lightning, flames, hearts, gold burst, souls, frost and more. Players pick one; you can lock them to ranks.</p></div>
+      <div class="card feature reveal"><h3><span>🎯</span>Bounties</h3><p>Streaks put coins on your head, and players can place their own. A bounty board and a floating top-bounty board.</p></div>
+      <div class="card feature reveal"><h3><span>💰</span>Coins &amp; shop</h3><p>Dupe-proof coins from kills and streaks, a shop with categories and a daily reward. Uses the Economy wallet when installed.</p></div>
+      <div class="card feature reveal"><h3><span>🧍</span>NPCs</h3><p>Place NPCs players tap to open the menu, kits, shop, claim kits, daily reward, stats or leaderboards.</p></div>
+      <div class="card feature reveal"><h3><span>🛡️</span>Safe spawn &amp; combat tag</h3><p>No PvP at spawn, no hiding in it mid-fight, and no /spawn or /kit in combat. Logging out in combat counts as a death.</p></div>
+      <div class="card feature reveal"><h3><span>🧱</span>World protection</h3><p>Anti-break and anti-place with an allow-list (cobwebs by default), a build height limit and a builder tag.</p></div>
+      <div class="card feature reveal"><h3><span>🚫</span>Anti-dupe</h3><p>Stops the common cursor and over-stack dupes on join and in inventories.</p></div>
+      <div class="card feature reveal"><h3><span>💤</span>AFK &amp; warnings</h3><p>Send AFK players to spawn, kick them or just mark them. Warn rule breakers with auto-kick after three.</p></div>
+      <div class="card feature reveal"><h3><span>📊</span>Live leaderboards</h3><p>Floating boards for kills, streaks, K/D, deaths, richest and top bounties. They update the moment it changes.</p></div>
+      <div class="card feature reveal"><h3><span>🏷️</span>Sidebar &amp; nametags</h3><p>Online count, top killer, hot streak, biggest bounty and your Discord. Rank, clan tag, HP and streak above heads.</p></div>
+      <div class="card feature reveal"><h3><span>🎮</span>Admin panel</h3><p>Spawn, kits, shop, ranks, NPCs, protection, moderation, streaks and boards, all in-game. Everything saves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="editions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Pricing</div>
+      <h2>Pick your edition</h2>
+      <p>One-time payment, by PayPal invoice in Discord.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="ed">
+        <thead>
+          <tr><th></th><th class="hl">Standard</th><th class="hl">Premium</th></tr>
+          <tr><td></td><td class="pr">$12</td><td class="pr">$20</td></tr>
+        </thead>
+        <tbody>
+          <tr><td>Every feature on this page</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Updates</td><td>3 months</td><td>12 months</td></tr>
+          <tr><td>Setup help on your Realm/server</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>1 custom tweak made for you</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>Rebrand add-on: your server's name in-game <span class="muted">(license stays Zenith)</span></td><td>+$2</td><td>+$2</td></tr>
+          <tr><td></td><td><a class="btn btn-gold btn-sm" data-discord href="#">Buy Standard</a></td><td><a class="btn btn-gold btn-sm" data-discord href="#">Buy Premium</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Get all six as <a class="gold" href="index.html#bundle">Zenith Complete</a>: <strong>$65</strong> Standard · <strong>$99</strong> Premium.</p>
+  </div>
+</section>
+
+<section id="setup">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Setup</div>
+      <h2>Running in 2 minutes</h2>
+    </div>
+    <div class="grid g3 steps">
+      <div class="card step reveal"><h3>Install</h3><p>Open the <code>.mcaddon</code> and turn on <strong>Zenith FFA</strong>. On a Realm, upload the world. No experiments.</p></div>
+      <div class="card step reveal"><h3>Make yourself admin</h3><p>As an operator: <code>/zenith_ffa:setadmin @s true</code>, then <code>/zenith_ffa:admin</code>.</p></div>
+      <div class="card step reveal"><h3>Set spawn &amp; kit</h3><p>Set spawn where you stand, save your kit from your inventory, and place a leaderboard. Done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="commands">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Commands</div>
+      <h2>Short list, all you need</h2>
+    </div>
+    <div class="cmds reveal">
+      <div class="cmd"><code>/zenith_ffa:menu</code><span>One menu for everything</span></div>
+      <div class="cmd"><code>/zenith_ffa:kit</code><span>Get a kit, save your layout, choose a rank kit</span></div>
+      <div class="cmd"><code>/zenith_ffa:claim</code><span>Claim kits like a VIP pack</span></div>
+      <div class="cmd"><code>/zenith_ffa:shop</code><span>Spend your coins</span></div>
+      <div class="cmd"><code>/zenith_ffa:daily</code><span>Daily coins with a login streak</span></div>
+      <div class="cmd"><code>/zenith_ffa:bounty</code><span>Bounty board, place a bounty</span></div>
+      <div class="cmd"><code>/zenith_ffa:effects</code><span>Pick your kill effect</span></div>
+      <div class="cmd"><code>/zenith_ffa:spawn</code><span>Warp to spawn (stand still)</span></div>
+      <div class="cmd"><code>/zenith_ffa:stats [player]</code><span>Kills, deaths, K/D, streaks, coins, rank</span></div>
+      <div class="cmd"><code>/zenith_ffa:top</code><span>Leaderboards</span></div>
+      <div class="cmd"><code>/zenith_ffa:admin</code><span>Admin panel: ranks, NPCs, protection, moderation and more</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band reveal">
+      <h2>Ready to <span class="grad">fight?</span></h2>
+      <p>Open a ticket in the Discord. You'll get a PayPal invoice, then your files.</p>
+      <a class="btn btn-gold" data-discord href="#">Buy Zenith FFA</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">ZENITH</a>
+      <p class="muted" style="max-width:320px;margin:12px 0 0">Premium packs &amp; addons for Minecraft Bedrock Edition Realms and servers.</p>
+    </div>
+    <div class="foot-links">
+      <div><b>Products</b><a href="ffa.html">Zenith FFA</a><a href="duels.html">Zenith Ranked Duels</a><a href="eco.html">Zenith Economy</a><a href="aw.html">Zenith Ability Weapons</a><a href="events.html">Zenith Events</a><a href="clans.html">Zenith Clans</a><a href="index.html#bundle">Zenith Complete</a></div>
+      <div><b>Help</b><a href="guides.html">Guides</a><a href="install.html">How to install</a><a href="changelog.html">Changelog</a><a href="index.html#faq">FAQ</a></div>
+      <div><b>Zenith</b><a href="commissions.html">Commissions</a><a href="work.html">Our work</a><a href="license.html">License &amp; terms</a><a data-discord href="https://discord.gg/XKXP7hn5Hr">Discord</a></div>
+    </div>
+  </div>
+  <div class="wrap legal">© <span data-year></span> Zenith. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

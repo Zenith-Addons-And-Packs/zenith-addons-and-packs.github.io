@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zenith-addons-and-packs.github.io/sitemap.xml

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#24242a"/>
+      <stop offset="0.55" stop-color="#141417"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#FFE7A3"/>
+      <stop offset="0.38" stop-color="#F2B83A"/>
+      <stop offset="0.75" stop-color="#D99A22"/>
+      <stop offset="1" stop-color="#A86F12"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2B83A" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#F2B83A" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#F2B83A" stop-opacity="0.7"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#F2B83A" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#F2B83A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- fine grid texture -->
+  <g stroke="#ffffff" stroke-opacity="0.025" stroke-width="2">
+    <path d="M0 128H1024M0 256H1024M0 384H1024M0 512H1024M0 640H1024M0 768H1024M0 896H1024"/>
+    <path d="M128 0V1024M256 0V1024M384 0V1024M512 0V1024M640 0V1024M768 0V1024M896 0V1024"/>
+  </g>
+
+  <!-- circle-safe rings (Discord crops to a circle) -->
+  <circle cx="512" cy="512" r="452" fill="none" stroke="url(#ring)" stroke-width="6"/>
+  <circle cx="512" cy="512" r="428" fill="none" stroke="#F2B83A" stroke-opacity="0.12" stroke-width="2"/>
+
+  <ellipse cx="512" cy="540" rx="330" ry="300" fill="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <!-- zenith peak -->
+    <path d="M412 300 L512 214 L612 300" fill="none" stroke="url(#gold)" stroke-width="30" stroke-linecap="square" stroke-linejoin="miter"/>
+    <!-- Z mark -->
+    <path fill="url(#gold)" d="M318 346 H706 V440 L476 676 H706 V770 H318 V676 L548 440 H318 Z"/>
+  </g>
+  <!-- bevel highlight on Z top edge -->
+  <path d="M318 346 H706 V356 H318 Z" fill="#FFF3CC" fill-opacity="0.55"/>
+</svg>
